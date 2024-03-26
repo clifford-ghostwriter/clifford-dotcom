@@ -1,13 +1,197 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* variables */
+
+:root {
+
+  /* colors */
+  --clr--primary-one: #7790E9;
+  --clr--primary-two: #000000;
+  --clr--primary-three: #ff0000;
+  --clr--primary-four: #ffffff;
+  --clr--primary-five: #c9abab;
+  --clr--primary-six: rgba(119, 144, 233, 0.8);
+  --clr--primary-eight: #c83fc8;
+  /* sizes */
+
+
+  --fs-300: 0.5rem;
+  --fs-300: 0.8125rem;
+  --fs-400: 0.875rem;
+  --fs-500: 0.9375rem;
+  --fs-600: 1rem;
+  --fs-650: 1.5rem;
+  --fs-700: 1.875rem;
+  --fs-750: 2rem;
+  --fs-800: 2.5rem;
+  --fs-900: 3.5rem;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+  --ff-primary: "Be Vietnam Pro", sans-serif;
+
+  --size--50: 0.75rem;
+  --size--100: 1.5rem;
+  --size--200: 2rem;
+  --size--300: 2.5rem;
+  --size--400: 3rem;
+  --size--500: 3.5rem;
+  --size--600: 4rem;
+  --size--700: 4.5rem;
+  --size--800: 5rem;
+  --size--900: 5.5rem;
+
+
+
+
+  font-family: var(--ff-primary);
+  --transition: all 0.3s linear;
+  --transition-two: all 0.3s ease;
+  --transition-slow: all 0.5s linear;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  /* width: 100vw; */
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+.btn {
+  cursor: pointer;
+  /* align-self: center; */
+  border: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+
+.section {
+  /* min-width: max-content; */
+  padding-top: 3rem;
+  /* border: 2px solid orange; */
+}
+
+.section-center {
+  max-width: 90vw;
+  /* min-width: min(1100px, 100%); */
+  margin-inline: auto;
+  /* border: 1px solid blue; */
+
+}
+
+.underline {
+  /* border-bottom: 3px solid red; */
+  width: 4rem;
+}
+
+
+/* utility classes */
+
+.text-center {
+  text-align: center;
+}
+
+
+.stickyNav {
+  position: sticky;
+  border-bottom: 1px solid var(--clr--primary-four);
+  opacity: 0.9;
+  top: 0;
+  z-index: 999;
+}
+
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 
+.loading {
+  width: 3rem;
+  height: 3rem;
+  margin: auto;
+  margin-top: 10rem;
+  border-radius: 50%;
+  border: 4px solid #ccc;
+  border-top-color: var(--clr--primary-one);
+  animation: spinner 0.6s linear infinite;
+} */
