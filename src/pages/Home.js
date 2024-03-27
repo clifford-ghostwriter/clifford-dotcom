@@ -6,7 +6,7 @@ import styled from "styled-components";
 const Home = () => {
   return (
     <Wrapper>
-      <div>Home alone</div>
+      <div>Home </div>
     </Wrapper>
   );
 };

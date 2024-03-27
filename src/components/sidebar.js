@@ -1,0 +1,113 @@
+import React from "react";
+import styled from "styled-components";
+import { UseAppContext } from "../contexts/AppContext";
+import { FaTimes } from "react-icons/fa";
+import { navLinks } from "../utils/constants";
+import { Link } from "react-router-dom";
+
+const Sidebar = () => {
+  const { isSidebarOpen, closeSidebar } = UseAppContext();
+  return (
+    <Wrapper>
+      <div
+        className={
+          isSidebarOpen ? "sidebar__center side__open" : "sidebar__center"
+        }>
+        <ul className="sidebar__links">
+          {navLinks.map((link) => {
+            const { icon, text, id, url } = link;
+            return (
+              <li className="link" key={id}>
+                {icon}
+                <Link to={url} className="url">
+                  {text}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+        <button className="side-bar__close-btn btn" onClick={closeSidebar}>
+          <FaTimes />
+        </button>
+      </div>
+    </Wrapper>
+  );
+};
+
+const Wrapper = styled.div`
+  background-color: blue;
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+
+  .sidebar__center {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--clr--primary-two);
+    height: 100dvh;
+    width: 100%;
+    opacity: 0.7;
+    transform: translate(-100%);
+    transition: var(--transition);
+    /* z-index: 999; */
+  }
+
+  .side__open {
+    transform: translate(0);
+    z-index: 999;
+  }
+
+  .side-bar__close-btn {
+    position: absolute;
+    display: block;
+    right: 1.9rem;
+    top: 4rem;
+    background-color: transparent;
+    color: var(--clr--primary-four);
+    font-size: var(--fs-700);
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+    display: flex;
+    /* flex: 1; */
+    /* border: 1px solid red; */
+    /* padding-left: 40%; */
+    align-items: center;
+    flex-shrink: 0;
+    gap: 0.25rem;
+    margin-left: 0;
+    color: white;
+    list-style: none;
+  }
+
+  /* li > * {
+    color: var(--clr--primary-four);
+    opacity: 1;
+  } */
+  .url {
+    list-style: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--clr--primary-four);
+    letter-spacing: 0.1rem;
+  }
+
+  .sidebar__links {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: var(--size--50);
+    /* background-color: yellow; */
+    align-items: flex-start;
+    height: 100%;
+    padding: 0 1rem;
+    padding-top: 3.4rem;
+    /* border: 1px solid red; */
+  }
+`;
+export default Sidebar;

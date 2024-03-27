@@ -1,12 +1,13 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
-import { Navbar } from "../components";
+import { Navbar, Sidebar } from "../components";
 
 const SharedLayout = () => {
   return (
     <Wrapper>
       <Navbar />
+      <Sidebar />
       <Outlet />
     </Wrapper>
   );

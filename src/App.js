@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, Services, SharedLayout } from "./pages";
+import { Error, EventsAndGallery, Home, Services, SharedLayout } from "./pages";
+
 function App() {
   return (
     <BrowserRouter>
@@ -7,7 +8,9 @@ function App() {
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/eventsandgallery" element={<EventsAndGallery />} />
         </Route>
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );
