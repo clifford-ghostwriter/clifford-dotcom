@@ -17,7 +17,7 @@ const Sidebar = () => {
           {navLinks.map((link) => {
             const { icon, text, id, url } = link;
             return (
-              <li className="link" key={id}>
+              <li className="link" key={id} onClick={closeSidebar}>
                 {icon}
                 <Link to={url} className="url">
                   {text}
@@ -48,10 +48,10 @@ const Wrapper = styled.div`
     background-color: var(--clr--primary-two);
     height: 100dvh;
     width: 100%;
-    opacity: 0.7;
+    opacity: 0.8;
     transform: translate(-100%);
     transition: var(--transition);
-    /* z-index: 999; */
+    z-index: 999;
   }
 
   .side__open {
@@ -62,7 +62,7 @@ const Wrapper = styled.div`
   .side-bar__close-btn {
     position: absolute;
     display: block;
-    right: 1.9rem;
+    right: 1.6rem;
     top: 4rem;
     background-color: transparent;
     color: var(--clr--primary-four);
@@ -108,6 +108,11 @@ const Wrapper = styled.div`
     padding: 0 1rem;
     padding-top: 3.4rem;
     /* border: 1px solid red; */
+  }
+  @media (width > 1100px) {
+    .side-bar__center {
+      transform: translate(-100%);
+    }
   }
 `;
 export default Sidebar;

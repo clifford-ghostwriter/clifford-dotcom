@@ -1,5 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Error, EventsAndGallery, Home, Services, SharedLayout } from "./pages";
+import {
+  Error,
+  EventsAndGallery,
+  Home,
+  Services,
+  SharedLayout,
+  Store,
+} from "./pages";
 
 function App() {
   return (
@@ -9,6 +16,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/eventsandgallery" element={<EventsAndGallery />} />
+          <Route path="/store" element={<Store />} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>

@@ -1,6 +1,7 @@
 import { MdAddAPhoto } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
 import { GiMightySpanner } from "react-icons/gi";
+import { MdLocalGroceryStore } from "react-icons/md";
 
 export const navLinks = [
   {
@@ -20,5 +21,11 @@ export const navLinks = [
     text: "events and gallery",
     url: "/eventsandgallery",
     icon: <MdAddAPhoto />,
+  },
+  {
+    id: 3,
+    text: "store",
+    url: "/store",
+    icon: <MdLocalGroceryStore />,
   },
 ];
