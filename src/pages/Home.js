@@ -2,6 +2,8 @@ import React from "react";
 import cliffordOne from "../assets/cliffordone.jpg";
 import cliffordTwo from "../assets/cliffordtwo.jpg";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { Projects } from "../components";
 
 const Home = () => {
   return (
@@ -22,8 +24,41 @@ const Home = () => {
                 alt="clifford"
               />
             </div>
-            <div className="about__me"></div>
+            <div className="about__me">
+              <p className="about__me__text">
+                <span>Name: </span>
+                clifford Izuchukwu
+              </p>
+              <p className="about__me__text">
+                <span>location: </span>
+                Earth
+              </p>
+              <p className="about__me__text">
+                <span>role: </span> front end Developer
+              </p>
+              <p className="about__me__text">
+                <span>stack: </span> html5, css3, javascript, react and nodejs
+              </p>
+              <p className="about__me__text">
+                <span>github: </span>
+                <a
+                  href="https://github.com/clifford-ghostwriter"
+                  target="_blank"
+                  rel="noreferrer">
+                  clifford-ghostwriter
+                </a>
+              </p>
+              <p className="about__me__text">
+                <span>skill: </span>when i am not writing code, i make music,
+                <Link to="/store"> check out my online beat store</Link>
+              </p>
+            </div>
           </div>
+        </div>
+      </div>
+      <div className="section-center">
+        <div className="projects">
+          <Projects />
         </div>
       </div>
     </Wrapper>
@@ -35,13 +70,16 @@ const Wrapper = styled.div`
   .heading {
     border-left: 5px solid red;
     margin: auto;
-    width: 8rem;
+    width: max-content;
     padding-left: 0.5rem;
+    /* border: 1px solid black; */
+    padding-block: 0.5rem;
   }
   .image__container {
     position: relative;
     width: 100%;
-    border: 1px solid red;
+    height: 30rem;
+    /* border: 1px solid red; */
     /* object-fit: contain; */
     /* object-position: center; */
     aspect-ratio: 1;
@@ -61,6 +99,31 @@ const Wrapper = styled.div`
   .image__container:hover .image__two {
     z-index: 999;
     opacity: 0.8;
+  }
+
+  .about__me {
+    display: grid;
+    gap: 1rem;
+    padding-block: var(--size--300);
+  }
+
+  .about__me {
+    text-transform: capitalize;
+  }
+
+  .about__me span {
+    color: var(--clr--primary-three);
+  }
+
+  .about__me a {
+    text-decoration: none;
+    /* color: red; */
+  }
+
+  .about__me__text {
+    display: grid;
+    /* grid-template-columns: auto 1fr; */
+    gap: 0.3rem;
   }
 `;
 export default Home;
