@@ -4,6 +4,7 @@ import cliffordTwo from "../assets/cliffordtwo.jpg";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Projects } from "../components";
+import { projects } from "../utils/constants";
 
 const Home = () => {
   return (
@@ -57,8 +58,11 @@ const Home = () => {
         </div>
       </div>
       <div className="section-center">
-        <div className="projects">
-          <Projects />
+        <div className="projects__center">
+          <h2>projects</h2>
+          {projects.map((project, index) => {
+            return <Projects project={project} key={index} />;
+          })}
         </div>
       </div>
     </Wrapper>
@@ -124,6 +128,11 @@ const Wrapper = styled.div`
     display: grid;
     /* grid-template-columns: auto 1fr; */
     gap: 0.3rem;
+  }
+
+  .projects__center {
+    display: grid;
+    gap: 2rem;
   }
 `;
 export default Home;

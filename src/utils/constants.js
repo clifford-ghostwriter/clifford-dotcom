@@ -9,6 +9,9 @@ import coletix from "../assets/eventsandgallery/jcolefest/tix.jpg";
 import colemepix from "../assets/eventsandgallery/jcolefest/mypix.jpg";
 import colegroup from "../assets/eventsandgallery/jcolefest/grouppix.jpg";
 
+// projects
+import wakainfo from "../assets/projects/wakainfo.jpg";
+
 export const navLinks = [
   {
     id: 1,
@@ -36,7 +39,32 @@ export const navLinks = [
   },
 ];
 
-export const projects = [];
+export const projects = [
+  {
+    title: "wakainfo",
+    image: wakainfo,
+    stack: "html5, css3 and javascript",
+    about: `wakainfo is a map app that renders information on countries.
+     users can access information as currency, population, continent, schools, hospital, hotels and tourist attractions 
+     as well as other information by selecting from a range of countries or clicking any country on the map. `,
+  },
+  {
+    title: "wakainfo",
+    image: wakainfo,
+    stack: "html5, css3 and javascript",
+    about: `wakainfo is a map app that renders information on countries.
+     users can access information as currency, population, continent, schools, hospital, hotels and tourist attractions 
+     as well as other information by selecting from a range of countries or clicking any country on the map. `,
+  },
+  {
+    title: "wakainfo",
+    image: wakainfo,
+    stack: "html5, css3 and javascript",
+    about: `wakainfo is a map app that renders information on countries.
+     users can access information as currency, population, continent, schools, hospital, hotels and tourist attractions 
+     as well as other information by selecting from a range of countries or clicking any country on the map. `,
+  },
+];
 
 export const eventandgallery = [
   {

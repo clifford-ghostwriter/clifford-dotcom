@@ -147,7 +147,7 @@ select {
 .section {
   /* min-width: max-content; */
   padding-top: 3rem;
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
 }
 
 .section-center {

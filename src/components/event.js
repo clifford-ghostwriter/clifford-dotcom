@@ -117,14 +117,14 @@ const Wrapper = styled.div`
   .event__images {
     /* display: flex; */
     height: 33rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     overflow-x: hidden;
     width: 100%;
     position: relative;
   }
 
   .event-center {
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     position: relative;
   }
   .image {
@@ -146,7 +146,7 @@ const Wrapper = styled.div`
   }
 
   .small__btn-container {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     position: absolute;
     bottom: 1rem;
     left: 50%;
