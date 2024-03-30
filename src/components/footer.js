@@ -93,6 +93,7 @@ const Wrapper = styled.div`
     border-radius: 5px;
     width: 15rem;
     text-align: center;
+    align-items: center;
   }
 
   .address__item:nth-child(1) {
