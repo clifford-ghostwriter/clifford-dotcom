@@ -12,13 +12,18 @@ const Home = () => {
       <div className="section-center">
         <div className="bio">
           <h3 className="heading">bio</h3>
+          <p className="bio__text">
+            I am a result oriented Front End Developer with the ability to learn
+            and solve problems. I am open to opportunities and collaborations
+            gaered toward making the world a better place through Tech.
+          </p>
           <div className="bio__center">
             <div className="image__container">
-              <img
+              {/* <img
                 className="bio__image image__one"
                 src={cliffordOne}
                 alt="clifford"
-              />
+              /> */}
               <img
                 className="bio__image image__two"
                 src={cliffordTwo}
@@ -50,7 +55,7 @@ const Home = () => {
                 </a>
               </p>
               <p className="about__me__text">
-                <span>skill: </span>when i am not writing code, i make music,
+                <span>skills: </span>when i am not writing code, i make music,
                 <Link to="/store"> check out my online beat store</Link>
               </p>
             </div>
@@ -60,9 +65,11 @@ const Home = () => {
       <div className="section-center">
         <div className="projects__center">
           <h2>projects</h2>
-          {projects.map((project, index) => {
-            return <Projects project={project} key={index} />;
-          })}
+          <div className="projects">
+            {projects.map((project, index) => {
+              return <Projects project={project} key={index} />;
+            })}
+          </div>
         </div>
       </div>
     </Wrapper>
@@ -71,6 +78,12 @@ const Home = () => {
 
 const Wrapper = styled.div`
   /* padding-top: var(--size--200); */
+
+  .bio__center {
+    border: 2px solid blue;
+    display: grid;
+    /* grid-template-rows: 1fr 1fr; */
+  }
   .heading {
     border-left: 5px solid red;
     margin: auto;
@@ -82,11 +95,12 @@ const Wrapper = styled.div`
   .image__container {
     position: relative;
     width: 100%;
-    height: 30rem;
-    /* border: 1px solid red; */
+    height: 100%;
+    height: 50rem;
+    border: 1px solid red;
     /* object-fit: contain; */
     /* object-position: center; */
-    aspect-ratio: 1;
+    /* aspect-ratio: 1; */
   }
   .bio__image {
     position: absolute;
@@ -96,19 +110,23 @@ const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     /* aspect-ratio: 1; */
+    object-position: center;
+    object-fit: cover;
 
     transition: var(--transition-two);
   }
 
-  .image__container:hover .image__two {
+  /* .image__container:hover .image__two {
     z-index: 999;
     opacity: 0.8;
-  }
+  } */
 
   .about__me {
     display: grid;
     gap: 1rem;
     padding-block: var(--size--300);
+    border: 1px solid black;
+    justify-items: flex-start;
   }
 
   .about__me {
@@ -126,13 +144,33 @@ const Wrapper = styled.div`
 
   .about__me__text {
     display: grid;
-    /* grid-template-columns: auto 1fr; */
+    justify-items: flex-start;
+    /* grid-template-columns: auto auto; */
     gap: 0.3rem;
+    /* border: 1px solid red; */
   }
 
   .projects__center {
+    padding-top: 4rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .projects {
     display: grid;
     gap: 2rem;
+  }
+  .projects__center h2 {
+    border-left: 5px solid red;
+    margin: auto;
+    width: 8rem;
+    padding-left: 0.5rem;
+    padding-bottom: -2rem;
+  }
+
+  .bio p {
+    text-align: center;
+    padding-block: 2rem;
   }
 `;
 export default Home;

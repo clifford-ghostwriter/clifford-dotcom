@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
-import { Navbar, Sidebar } from "../components";
+import { Footer, Navbar, Sidebar } from "../components";
 
 const SharedLayout = () => {
   return (
@@ -9,6 +9,7 @@ const SharedLayout = () => {
       <Navbar />
       <Sidebar />
       <Outlet />
+      <Footer />
     </Wrapper>
   );
 };

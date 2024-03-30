@@ -94,6 +94,9 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   /* width: 100vw; */
+  background-color: #000000;
+  opacity: 0.8;
+  color: gold;
 }
 
 /* A elements that don't have a class get default styles */

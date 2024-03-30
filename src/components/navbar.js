@@ -41,6 +41,7 @@ const Wrapper = styled.div`
   height: 10rem;
   /* display: grid; */
   align-content: center;
+  color: white;
 
   .nav__center {
     height: 5rem;
