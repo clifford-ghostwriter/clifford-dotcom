@@ -5,20 +5,21 @@ import { UseAppContext } from "../contexts/AppContext";
 import { navLinks } from "../utils/constants";
 import { Link } from "react-router-dom";
 import { MdOutlineLightMode } from "react-icons/md";
-// import { MdOutlineNightlightRound } from "react-icons/md";
-import { BsMoonFill } from "react-icons/bs";
+import { MdOutlineNightlightRound } from "react-icons/md";
 
 const Navbar = () => {
   const { openSidebar, isSidebarOpen, toggletheme, isdarkthemeon } =
     UseAppContext();
 
   const rotateBtn = (e) => {
-    console.log(e.currentTarget);
-    const target = e.currentTarget;
-    target.classList.add("rotate");
-    setTimeout(() => {
-      target.classList.remove("rotate");
-    }, 500);
+    console.log(e.target);
+    const target = e.target;
+
+    target.style.transform = "rotate(360deg)";
+
+    // target.style.Transform = Rotate(360);
+    // target.classList.remove("class__rotate");
+    // target.classList.add("class__rotate");
 
     toggletheme();
   };
@@ -30,7 +31,11 @@ const Navbar = () => {
         </div>
         <div className="theme_btn_container">
           <button className="theme__btn" onClick={(e) => rotateBtn(e)}>
-            {isdarkthemeon ? <BsMoonFill /> : <MdOutlineLightMode />}
+            {isdarkthemeon ? (
+              <MdOutlineNightlightRound />
+            ) : (
+              <MdOutlineLightMode />
+            )}
           </button>
           <p>{isdarkthemeon ? "dark theme" : "bright theme"}</p>
         </div>
@@ -67,7 +72,7 @@ const Wrapper = styled.div`
   .theme_btn_container {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.02rem;
     text-transform: capitalize;
     font-size: small;
   }
@@ -110,7 +115,7 @@ const Wrapper = styled.div`
   .theme__btn {
     display: grid;
     justify-content: flex-end;
-    font-size: var(--size--100);
+    font-size: var(--size--200);
     align-content: center;
     width: max-content;
     /* border: 1px solid yellow; */
@@ -166,7 +171,7 @@ const Wrapper = styled.div`
     /* animation: spinner 0.5s ease-in-out 1; */
   }
 
-  .rotate {
+  .class__rotate {
     animation: spinner 0.5s ease-in-out 1;
   }
 
