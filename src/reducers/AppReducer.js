@@ -10,8 +10,9 @@ export const app_reducer = (state, action) => {
   }
 
   if (action.type === TOGGLE_THEME) {
-    const { isdarkthemeon } = state;
-    return { ...state, isdarkthemeon: !isdarkthemeon };
+    const { isdarkthemeon, theme } = state;
+    const newtheme = theme === "light-theme" ? "dark-theme" : "light-theme";
+    return { ...state, isdarkthemeon: !isdarkthemeon, theme: newtheme };
   }
 
   // throw new Error(`No matching "${action.type}" - action type`);

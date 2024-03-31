@@ -1,16 +1,25 @@
-import React, { useContext, useReducer } from "react";
+import React, { useContext, useEffect, useReducer } from "react";
 import { app_reducer } from "../reducers/AppReducer";
 import { SIDEBAR_CLOSE, SIDEBAR_OPEN, TOGGLE_THEME } from "../utils/actions";
+import { addToLocalStorage, getFromLocalStorage } from "../utils/localstorage";
 
 const appContext = React.createContext();
 
 const initialAppAstate = {
   isSidebarOpen: false,
   isdarkthemeon: false,
+  theme: getFromLocalStorage("theme")
+    ? getFromLocalStorage("theme")
+    : "light-theme",
 };
 
 export const AppContext = ({ children }) => {
   const [state, dispatch] = useReducer(app_reducer, initialAppAstate);
+
+  useEffect(() => {
+    document.documentElement.className = state.theme;
+    addToLocalStorage("theme", state.theme);
+  }, [state.theme]);
 
   const openSidebar = () => {
     dispatch({ type: SIDEBAR_OPEN });

@@ -10,9 +10,9 @@ const EventsAndGallery = () => {
         <div className="section__head">
           <h3 className="event__heading">events</h3>
           <p>
-            over the years I have had opportunities to attend events, some are
-            for fun, while others are educational. I like to dump some pictures
-            from the events here to entertain you, if possible educate you.
+            over the years I have had opportunities to attend events, some were
+            for fun, while others were educational. I like to dump pictures from
+            some of the events here to entertain you, if possible educate you.
           </p>
         </div>
         <div className="events">

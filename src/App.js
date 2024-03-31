@@ -7,6 +7,7 @@ import {
   SharedLayout,
   Store,
 } from "./pages";
+// import { useEffect, useState } from "react";
 
 function App() {
   return (

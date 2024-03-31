@@ -1,4 +1,5 @@
-import React from "react";
+// eslint-disable-next-line
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
 import { UseAppContext } from "../contexts/AppContext";
@@ -9,8 +10,17 @@ import { MdOutlineLightMode } from "react-icons/md";
 import { BsMoonFill } from "react-icons/bs";
 
 const Navbar = () => {
+  // const [theme, setTheme] = useState("dark-theme");
   const { openSidebar, isSidebarOpen, toggletheme, isdarkthemeon } =
     UseAppContext();
+
+  // const changetheme = function () {
+  //   if (theme === "dark-theme") {
+  //     setTheme("light-theme");
+  //   } else {
+  //     setTheme("dark-theme");
+  //   }
+  // };
 
   const rotateBtn = (e) => {
     console.log(e.currentTarget);
@@ -21,7 +31,12 @@ const Navbar = () => {
     }, 500);
 
     toggletheme();
+    // changetheme();
   };
+
+  // useEffect(() => {
+  //   document.documentElement.className = theme;
+  // }, [theme]);
   return (
     <Wrapper>
       <div className="nav__center section-center">

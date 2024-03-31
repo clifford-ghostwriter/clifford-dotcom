@@ -1,5 +1,6 @@
 /* variables */
 
+
 :root {
 
   /* colors */
@@ -53,6 +54,18 @@
 }
 
 
+.light-theme {
+  --bcg-color: #ffffff;
+  --color: #000000;
+}
+
+.dark-theme {
+  --bcg-color: #000000;
+  --color: #ffffff;
+}
+
+
+
 /* Box sizing rules */
 *,
 *::before,
@@ -94,9 +107,9 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   /* width: 100vw; */
-  background-color: #000000;
+  background-color: var(--bcg-color);
   opacity: 0.8;
-  color: gold;
+  color: var(--color);
 }
 
 /* A elements that don't have a class get default styles */
