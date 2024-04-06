@@ -10,6 +10,7 @@ const Event = ({ event }) => {
   // eslint-disable-next-line
 
   const { text, images } = event;
+  // eslint-disable-next-line
   const [slidesData, setSlides] = useState(images);
 
   useEffect(() => {
@@ -114,10 +115,16 @@ const Event = ({ event }) => {
 };
 
 const Wrapper = styled.div`
+  border: 3px solid yellow;
+  /* padding-block: 2rem; */
+
+  /* width: 50vw; */
+  /* margin: auto; */
+
   .event__images {
     /* display: flex; */
-    height: 33rem;
-    /* border: 1px solid red; */
+    height: 30rem;
+    border: 1px solid red;
     overflow-x: hidden;
     width: 100%;
     position: relative;

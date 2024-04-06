@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, forwardRef } from "react";
 import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
 import { UseAppContext } from "../contexts/AppContext";
@@ -9,7 +9,7 @@ import { MdOutlineLightMode } from "react-icons/md";
 // import { MdOutlineNightlightRound } from "react-icons/md";
 import { BsMoonFill } from "react-icons/bs";
 
-const Navbar = () => {
+const Navbar = forwardRef(function (_, ref) {
   // const [theme, setTheme] = useState("dark-theme");
   const { openSidebar, isSidebarOpen, toggletheme, isdarkthemeon } =
     UseAppContext();
@@ -23,7 +23,7 @@ const Navbar = () => {
   // };
 
   const rotateBtn = (e) => {
-    console.log(e.currentTarget);
+    // console.log(e.currentTarget);
     const target = e.currentTarget;
     target.classList.add("rotate");
     setTimeout(() => {
@@ -38,21 +38,23 @@ const Navbar = () => {
   //   document.documentElement.className = theme;
   // }, [theme]);
   return (
-    <Wrapper>
+    <Wrapper ref={ref}>
       <div className="nav__center section-center">
         <div className="nav__text">
-          <p>clifford.com</p>
+          <p>clifford</p>
         </div>
-        <div className="theme_btn_container">
-          <button className="theme__btn" onClick={(e) => rotateBtn(e)}>
-            {isdarkthemeon ? <BsMoonFill /> : <MdOutlineLightMode />}
-          </button>
-          <p>{isdarkthemeon ? "dark theme" : "bright theme"}</p>
-        </div>
-        <div className="nav__btn__container">
-          <button className="nav__btn" onClick={openSidebar}>
-            {isSidebarOpen ? null : <FaBars />}
-          </button>
+        <div className="btn__container">
+          <div className="theme_btn_container">
+            <button className="theme__btn" onClick={(e) => rotateBtn(e)}>
+              {isdarkthemeon ? <BsMoonFill /> : <MdOutlineLightMode />}
+            </button>
+            <p>{isdarkthemeon ? "dark theme" : "bright theme"}</p>
+          </div>
+          <div className="nav__btn__container">
+            <button className="nav__btn" onClick={openSidebar}>
+              {isSidebarOpen ? null : <FaBars />}
+            </button>
+          </div>
         </div>
         <ul className="sidebar__links">
           {navLinks.map((link) => {
@@ -70,7 +72,7 @@ const Navbar = () => {
       </div>
     </Wrapper>
   );
-};
+});
 
 const Wrapper = styled.div`
   background-color: black;
@@ -87,18 +89,28 @@ const Wrapper = styled.div`
     font-size: small;
   }
 
+  .btn__container {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-content: center;
+    /* border: 1px solid white; */
+    gap: 1rem;
+  }
+
   .nav__center {
     height: 5rem;
     background-color: red;
     padding-block: 1rem;
     display: flex;
+    /* display: grid; */
+    /* grid-template-columns: auto auto auto; */
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
     /* align-content: stretch; */
     border: none;
     box-shadow: var(--box-shadow);
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
   }
 
   .nav__center > * {
@@ -108,6 +120,9 @@ const Wrapper = styled.div`
   .nav__btn__container {
     /* border: 1px solid yellow; */
     padding: var(--size--25);
+    align-self: flex-end;
+    display: grid;
+    /* justify-content: flex-end; */
   }
 
   .nav__btn {
@@ -119,6 +134,8 @@ const Wrapper = styled.div`
     border: 1px solid yellow;
     cursor: pointer;
     border: none;
+    justify-self: flex-end;
+
     /* display: none; */
   }
 
@@ -139,6 +156,7 @@ const Wrapper = styled.div`
   .nav__text {
     /* border: 1px solid yellow; */
     padding: var(--size--25);
+    font-size: 1.2rem;
   }
   .sidebar__links {
     gap: 2rem;

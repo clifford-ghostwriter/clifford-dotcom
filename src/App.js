@@ -6,6 +6,7 @@ import {
   Services,
   SharedLayout,
   Store,
+  SingleProject,
 } from "./pages";
 // import { useEffect, useState } from "react";
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/eventsandgallery" element={<EventsAndGallery />} />
           <Route path="/store" element={<Store />} />
+          <Route path="products/:id" element={<SingleProject />} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>

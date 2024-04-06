@@ -13,13 +13,15 @@ const Image = ({ image, index, type }) => {
   );
 };
 const Wrapper = styled.div`
+  /* overflow: hidden; */
   transition: var(--transition-slow);
+  border: 1px solid red;
 
   background-image: url(${(p) => p.$image});
 
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-origin: border-box;
   width: 100%;
   height: 100%;

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useReducer } from "react";
+import React, { useContext, useEffect, useReducer, useState } from "react";
 import { app_reducer } from "../reducers/AppReducer";
 import { SIDEBAR_CLOSE, SIDEBAR_OPEN, TOGGLE_THEME } from "../utils/actions";
 import { addToLocalStorage, getFromLocalStorage } from "../utils/localstorage";
@@ -15,6 +15,20 @@ const initialAppAstate = {
 
 export const AppContext = ({ children }) => {
   const [state, dispatch] = useReducer(app_reducer, initialAppAstate);
+  const [windowWidth, setWdith] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      const width = window.innerWidth;
+      setWdith(width);
+      // console.log(width, windowWidth);
+      // console.log(state.isSidebarOpen);
+    });
+  }, [windowWidth]);
+
+  useEffect(() => {
+    if (windowWidth >= 1200) closeSidebar();
+  }, [windowWidth]);
 
   useEffect(() => {
     document.documentElement.className = state.theme;

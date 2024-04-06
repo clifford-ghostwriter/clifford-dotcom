@@ -11,7 +11,7 @@ import { FaLocationDot } from "react-icons/fa6";
 const Footer = () => {
   return (
     <Wrapper className="section">
-      <div className="section-center footer__center">
+      <div className=" footer__center">
         <div className="line__container">
           <p className="line"></p>
           <p className="text">contact me</p>
@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
         <address>
           <p className="address__item">
-            <MdOutlineEmail /> <span>cliffizuchcuks@gmail.com</span>
+            <MdOutlineEmail /> <span>cliffizuchucks@gmail.com</span>
           </p>
           <p className="address__item">
             <FaPhone /> <span>+234 8064985287 </span>

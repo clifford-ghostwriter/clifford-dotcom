@@ -1,16 +1,24 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+// import { UseAppContext } from "../contexts/AppContext";
+import { projects } from "../utils/constants";
 import styled from "styled-components";
-// import { FaSearch } from "react-icons/fa";
-import { Link } from "react-router-dom";
-// import { MdOutlineLocationSearching } from "react-icons/md";
+// import { Link } from "react-router-dom";
+
 import { PiTrafficSignLight } from "react-icons/pi";
 
-const Projects = ({ project, index }) => {
+const SingleProject = () => {
+  const { id } = useParams();
+  // const { projects } = UseAppContext();
+
+  const project = projects[id];
   const { title, about, image, stack } = project;
-  console.log(about.slice(0, 100), index);
+  // console.log(project, id);
+
+  console.log(id);
   return (
-    <Wrapper>
-      <div className="project__card">
+    <Wrapper className="section">
+      <div className="project__card section-center">
         <div className="project__img">
           <img src={image} alt="project" />
           <div className="project__link">
@@ -33,11 +41,14 @@ const Projects = ({ project, index }) => {
           </p>
           <p>
             <span>about:</span>
-            {about.substring(0, 150)}
-            <Link to={`/products/${index}`} className="singleproject__link">
-              see more...
-            </Link>
+            {about}
           </p>
+          <a
+            href="https://waka-info.netlify.app/"
+            target="_blank"
+            rel="noreferrer">
+            visit site
+          </a>
         </div>
       </div>
     </Wrapper>
@@ -45,10 +56,15 @@ const Projects = ({ project, index }) => {
 };
 
 const Wrapper = styled.div`
+  /* height: 70dvh; */
   box-shadow: 2px 2px 3px black;
   background-color: black;
   /* height: 15rem; */
   color: white;
+
+  .project__card {
+    width: 60%;
+  }
 
   .singleproject__link {
     color: red;
@@ -93,7 +109,7 @@ const Wrapper = styled.div`
     /* border: 1px solid blue; */
   }
 
-  a {
+  app {
     color: white;
     /* border: 1px solid white; */
     display: grid;
@@ -112,4 +128,4 @@ const Wrapper = styled.div`
     z-index: 999;
   }
 `;
-export default Projects;
+export default SingleProject;

@@ -1,5 +1,5 @@
 import React from "react";
-import cliffordOne from "../assets/cliffordone.jpg";
+// import cliffordOne from "../assets/cliffordone.jpg";
 import cliffordTwo from "../assets/cliffordtwo.jpg";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
@@ -29,6 +29,7 @@ const Home = () => {
                 src={cliffordTwo}
                 alt="clifford"
               />
+              {/* <div className="overlay"></div> */}
             </div>
             <div className="about__me">
               <p className="about__me__text">
@@ -67,7 +68,7 @@ const Home = () => {
           <h2>projects</h2>
           <div className="projects">
             {projects.map((project, index) => {
-              return <Projects project={project} key={index} />;
+              return <Projects project={project} key={index} index={index} />;
             })}
           </div>
         </div>
@@ -79,10 +80,19 @@ const Home = () => {
 const Wrapper = styled.div`
   /* padding-top: var(--size--200); */
 
+  /* border: 1px solid yellow; */
+
   .bio__center {
     border: 2px solid blue;
+    height: 30rem;
     display: grid;
-    /* grid-template-rows: 1fr 1fr; */
+
+    /* grid-template-rows: auto; */
+    /* grid-template-rows: auto 1fr; */
+    /* grid-template-columns: 1fr 1fr; */
+    overflow: hidden;
+    margin-inline: 15rem;
+    background-color: white;
   }
   .heading {
     border-left: 5px solid red;
@@ -96,11 +106,20 @@ const Wrapper = styled.div`
     position: relative;
     width: 100%;
     height: 100%;
-    height: 50rem;
+    height: 30rem;
     border: 1px solid red;
     /* object-fit: contain; */
     /* object-position: center; */
     /* aspect-ratio: 1; */
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    /* opacity: 0.6; */
   }
   .bio__image {
     position: absolute;
@@ -109,9 +128,11 @@ const Wrapper = styled.div`
     display: block;
     width: 100%;
     height: 100%;
+    display: block;
     /* aspect-ratio: 1; */
-    object-position: center;
+
     object-fit: cover;
+    object-position: right 29%;
 
     transition: var(--transition-two);
   }
@@ -122,9 +143,9 @@ const Wrapper = styled.div`
   } */
 
   .about__me {
-    display: grid;
-    gap: 1rem;
-    padding-block: var(--size--300);
+    /* display: grid; */
+    /* gap: 1rem; */
+    /* padding-block: var(--size--300); */
     border: 1px solid black;
     justify-items: flex-start;
   }
@@ -146,7 +167,7 @@ const Wrapper = styled.div`
     display: grid;
     justify-items: flex-start;
     /* grid-template-columns: auto auto; */
-    gap: 0.3rem;
+    /* gap: 0.3rem; */
     /* border: 1px solid red; */
   }
 
@@ -158,8 +179,12 @@ const Wrapper = styled.div`
 
   .projects {
     display: grid;
-    gap: 2rem;
+    gap: 4rem;
+    margin: auto;
+    justify-items: center;
+    /* width: 80%; */
   }
+
   .projects__center h2 {
     border-left: 5px solid red;
     margin: auto;
@@ -170,7 +195,28 @@ const Wrapper = styled.div`
 
   .bio p {
     text-align: center;
-    padding-block: 2rem;
+    /* padding-block: 2rem; */
+  }
+
+  @media (min-width: 1200px) {
+    .projects {
+      grid-template-areas:
+        "area1 area1 area2 area2"
+        ".area3 area3 .";
+      width: 70%;
+    }
+
+    .projects > *:nth-child(1) {
+      grid-area: area1;
+    }
+
+    .projects > *:nth-child(2) {
+      grid-area: area2;
+    }
+
+    .projects > *:nth-child(3) {
+      grid-area: area3;
+    }
   }
 `;
 export default Home;

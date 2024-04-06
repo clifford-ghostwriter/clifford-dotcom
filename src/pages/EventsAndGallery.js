@@ -12,7 +12,8 @@ const EventsAndGallery = () => {
           <p>
             over the years I have had opportunities to attend events, some were
             for fun, while others were educational. I like to dump pictures from
-            some of the events here to entertain you, if possible educate you.
+            some of the events here to entertain you, and if possible educate
+            you.
           </p>
         </div>
         <div className="events">
@@ -26,6 +27,7 @@ const EventsAndGallery = () => {
 };
 
 const Wrapper = styled.div`
+  border: 3px solid white;
   .event__heading {
     border-left: 5px solid red;
     margin: auto;

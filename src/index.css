@@ -193,6 +193,7 @@ select {
   opacity: 0.9;
   top: 0;
   z-index: 999;
+  isolation: isolate;
 }
 
 
