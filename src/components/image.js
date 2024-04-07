@@ -44,5 +44,9 @@ const Wrapper = styled.div`
     top: 0;
     left: 0;
   } */
+
+  @media (min-width: 800px) {
+    background-size: contain;
+  }
 `;
 export default Image;

@@ -24,16 +24,16 @@ const Projects = ({ project, index }) => {
         </div>
         <div className="project__info">
           <h3>
-            <span>title:</span>
+            <span>title: </span>
             {title}
           </h3>
           <p>
-            <span>stack:</span>
+            <span>stack: </span>
             {stack}
           </p>
           <p>
-            <span>about:</span>
-            {about.substring(0, 150)}
+            <span>about: </span>
+            {about.substring(0, 150)} <br />
             <Link to={`/products/${index}`} className="singleproject__link">
               see more...
             </Link>
@@ -49,6 +49,7 @@ const Wrapper = styled.div`
   background-color: black;
   /* height: 15rem; */
   color: white;
+  isolation: isolate;
 
   .singleproject__link {
     color: red;
@@ -56,9 +57,16 @@ const Wrapper = styled.div`
     display: inline;
   }
 
+  .project__info {
+    display: grid;
+    gap: 1rem;
+    padding-block: 1rem;
+  }
+
   .project__info > * {
     /* display: flex; */
-    gap: 1rem;
+    /* gap: 0.5rem; */
+    display: grid;
   }
 
   .project__img {
@@ -110,6 +118,9 @@ const Wrapper = styled.div`
   .project__img:hover .project__link {
     display: grid;
     z-index: 999;
+  }
+  span {
+    color: var(--clr--primary-three);
   }
 `;
 export default Projects;

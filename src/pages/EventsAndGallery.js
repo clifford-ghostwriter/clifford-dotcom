@@ -6,7 +6,7 @@ import { Event } from "../components";
 const EventsAndGallery = () => {
   return (
     <Wrapper className="section">
-      <div className="section-center">
+      <div className="section-center event__center">
         <div className="section__head">
           <h3 className="event__heading">events</h3>
           <p>
@@ -27,7 +27,9 @@ const EventsAndGallery = () => {
 };
 
 const Wrapper = styled.div`
-  border: 3px solid white;
+  /* border: 3px solid white; */
+  padding-bottom: 2rem;
+
   .event__heading {
     border-left: 5px solid red;
     margin: auto;
@@ -39,6 +41,26 @@ const Wrapper = styled.div`
   .section__head p {
     text-align: center;
     padding-block: 2rem;
+  }
+
+  @media (min-width: 800px) {
+    .bio__center {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      /* border: 1px solid red; */
+      /* width: 70%; */
+      margin: auto;
+    }
+
+    .bio__image {
+      object-fit: contain;
+      object-position: right 29%;
+    }
+
+    .event__center {
+      width: 50%;
+      margin: auto;
+    }
   }
 `;
 export default EventsAndGallery;

@@ -46,9 +46,9 @@ const Navbar = forwardRef(function (_, ref) {
         <div className="btn__container">
           <div className="theme_btn_container">
             <button className="theme__btn" onClick={(e) => rotateBtn(e)}>
-              {isdarkthemeon ? <BsMoonFill /> : <MdOutlineLightMode />}
+              {isdarkthemeon ? <MdOutlineLightMode /> : <BsMoonFill />}
             </button>
-            <p>{isdarkthemeon ? "dark theme" : "bright theme"}</p>
+            <p>{isdarkthemeon ? "bright theme " : "dark theme"}</p>
           </div>
           <div className="nav__btn__container">
             <button className="nav__btn" onClick={openSidebar}>
@@ -80,6 +80,7 @@ const Wrapper = styled.div`
   /* display: grid; */
   align-content: center;
   color: white;
+  z-index: 999;
 
   .theme_btn_container {
     display: flex;

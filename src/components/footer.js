@@ -25,7 +25,7 @@ const Footer = () => {
             <FaPhone /> <span>+234 8064985287 </span>
           </p>
           <p className="address__item">
-            <FaLocationDot /> <span>Nigeria</span>
+            <FaLocationDot /> <span>Remote</span>
           </p>
         </address>
         <div className="line__container">

@@ -56,11 +56,13 @@ const SingleProject = () => {
 };
 
 const Wrapper = styled.div`
+  padding-bottom: 2rem;
   /* height: 70dvh; */
-  box-shadow: 2px 2px 3px black;
-  background-color: black;
+  /* box-shadow: 2px 2px 3px black; */
+  /* background-color: black; */
   /* height: 15rem; */
   color: white;
+  isolation: isolate;
 
   .project__card {
     width: 60%;

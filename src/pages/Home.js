@@ -15,7 +15,7 @@ const Home = () => {
           <p className="bio__text">
             I am a result oriented Front End Developer with the ability to learn
             and solve problems. I am open to opportunities and collaborations
-            gaered toward making the world a better place through Tech.
+            gaered towards making the world a better place through Tech.
           </p>
           <div className="bio__center">
             <div className="image__container">
@@ -33,21 +33,19 @@ const Home = () => {
             </div>
             <div className="about__me">
               <p className="about__me__text">
-                <span>Name: </span>
-                clifford Izuchukwu
+                <span className="info__title">Name:</span>{" "}
+                <span>Clifford Izuchukwu</span>
               </p>
               <p className="about__me__text">
-                <span>location: </span>
-                Earth
+                <span className="info__title">role:</span>{" "}
+                <span>Front End Developer</span>
               </p>
               <p className="about__me__text">
-                <span>role: </span> front end Developer
+                <span className="info__title">stack: </span>
+                <span>Html5, Css3, Javascript, React and Nodejs</span>
               </p>
               <p className="about__me__text">
-                <span>stack: </span> html5, css3, javascript, react and nodejs
-              </p>
-              <p className="about__me__text">
-                <span>github: </span>
+                <span className="info__title">github:</span>
                 <a
                   href="https://github.com/clifford-ghostwriter"
                   target="_blank"
@@ -56,8 +54,18 @@ const Home = () => {
                 </a>
               </p>
               <p className="about__me__text">
-                <span>skills: </span>when i am not writing code, i make music,
-                <Link to="/store"> check out my online beat store</Link>
+                <span className="info__title">location: </span>{" "}
+                <span>Remote</span>
+              </p>
+
+              <p className="about__me__text">
+                <span className="info__title">skills: </span>{" "}
+                <span>
+                  When I am not writing code, I make music, check out my
+                  <Link to="/store" className="store">
+                    online beat store
+                  </Link>
+                </span>
               </p>
             </div>
           </div>
@@ -81,18 +89,22 @@ const Wrapper = styled.div`
   /* padding-top: var(--size--200); */
 
   /* border: 1px solid yellow; */
+  padding-bottom: 2rem;
 
   .bio__center {
-    border: 2px solid blue;
-    height: 30rem;
+    /* border: 2px solid blue; */
+    /* height: 30rem; */
     display: grid;
+    width: 100%;
+    color: white;
+    padding-top: 2rem;
 
     /* grid-template-rows: auto; */
     /* grid-template-rows: auto 1fr; */
     /* grid-template-columns: 1fr 1fr; */
     overflow: hidden;
-    margin-inline: 15rem;
-    background-color: white;
+    /* margin-inline: 15rem; */
+    /* background-color: white; */
   }
   .heading {
     border-left: 5px solid red;
@@ -106,7 +118,7 @@ const Wrapper = styled.div`
     position: relative;
     width: 100%;
     height: 100%;
-    height: 30rem;
+    height: 35rem;
     border: 1px solid red;
     /* object-fit: contain; */
     /* object-position: center; */
@@ -132,9 +144,14 @@ const Wrapper = styled.div`
     /* aspect-ratio: 1; */
 
     object-fit: cover;
-    object-position: right 29%;
+    /* object-position: right 29%; */
 
     transition: var(--transition-two);
+  }
+
+  .store {
+    display: inline-block;
+    padding-left: 0.2rem;
   }
 
   /* .image__container:hover .image__two {
@@ -143,10 +160,10 @@ const Wrapper = styled.div`
   } */
 
   .about__me {
-    /* display: grid; */
-    /* gap: 1rem; */
-    /* padding-block: var(--size--300); */
-    border: 1px solid black;
+    display: grid;
+    gap: 1rem;
+    padding-block: var(--size--50);
+    /* border: 1px solid black; */
     justify-items: flex-start;
   }
 
@@ -154,8 +171,13 @@ const Wrapper = styled.div`
     text-transform: capitalize;
   }
 
-  .about__me span {
+  .info__title {
     color: var(--clr--primary-three);
+  }
+
+  span {
+    text-transform: capitalize;
+    text-align: left;
   }
 
   .about__me a {
@@ -165,9 +187,10 @@ const Wrapper = styled.div`
 
   .about__me__text {
     display: grid;
-    justify-items: flex-start;
+    /* justify-items: left; */
+    text-transform: initial;
     /* grid-template-columns: auto auto; */
-    /* gap: 0.3rem; */
+    gap: 0.3rem;
     /* border: 1px solid red; */
   }
 
@@ -175,6 +198,7 @@ const Wrapper = styled.div`
     padding-top: 4rem;
     display: grid;
     gap: 1rem;
+    border: 1px solid blue;
   }
 
   .projects {
@@ -183,6 +207,7 @@ const Wrapper = styled.div`
     margin: auto;
     justify-items: center;
     /* width: 80%; */
+    border: 1px solid blue;
   }
 
   .projects__center h2 {
@@ -198,12 +223,57 @@ const Wrapper = styled.div`
     /* padding-block: 2rem; */
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 600px) {
+    .bio__image {
+      object-fit: cover;
+      object-position: center;
+      /* border: 1px solid red; */
+      height: 100%;
+      width: 100%;
+    }
+
+    /* .bio__center {
+      width: 80%;
+      margin: auto;
+    } */
+    .image__container {
+      height: 50rem;
+      border: 1px solid red;
+    }
+
+    .bio {
+      width: 80%;
+      margin: auto;
+      border: 1px solid red;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .bio__center {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      /* border: 1px solid red; */
+      /* width: 70%; */
+      margin: auto;
+    }
+
+    .bio__image {
+      object-fit: cover;
+      /* object-position: right 29%; */
+    }
+
+    .bio {
+      width: 80%;
+      margin: auto;
+    }
+  }
+
+  @media (min-width: 800px) {
     .projects {
       grid-template-areas:
         "area1 area1 area2 area2"
         ".area3 area3 .";
-      width: 70%;
+      width: 80%;
     }
 
     .projects > *:nth-child(1) {

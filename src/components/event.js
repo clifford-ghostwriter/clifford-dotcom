@@ -116,7 +116,7 @@ const Event = ({ event }) => {
 
 const Wrapper = styled.div`
   border: 3px solid yellow;
-  /* padding-block: 2rem; */
+  padding-block: 2rem;
 
   /* width: 50vw; */
   /* margin: auto; */
@@ -124,9 +124,9 @@ const Wrapper = styled.div`
   .event__images {
     /* display: flex; */
     height: 30rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     overflow-x: hidden;
-    width: 100%;
+    /* width: 100%; */
     position: relative;
   }
 
@@ -135,8 +135,8 @@ const Wrapper = styled.div`
     position: relative;
   }
   .image {
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
   }
 
   .previous {
@@ -207,6 +207,26 @@ const Wrapper = styled.div`
     background-color: transparent;
     /* border: 1px solid red; */
     color: white;
+  }
+
+  @media (min-width: 800px) {
+    .bio__center {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      /* border: 1px solid red; */
+      /* width: 70%; */
+      margin: auto;
+    }
+
+    .bio__image {
+      object-fit: contain;
+      object-position: right 29%;
+    }
+
+    .event__center {
+      width: 50%;
+      margin: auto;
+    }
   }
 `;
 export default Event;

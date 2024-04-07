@@ -11,6 +11,8 @@ import colegroup from "../assets/eventsandgallery/jcolefest/grouppix.jpg";
 
 // projects
 import wakainfo from "../assets/projects/wakainfo.jpg";
+import pioclean from "../assets/projects/pioclean.jpg";
+import complaintportal from "../assets/projects/complaintportal.jpg";
 
 export const navLinks = [
   {
@@ -41,7 +43,7 @@ export const navLinks = [
 
 export const projects = [
   {
-    title: "wakainfo",
+    title: "wakainfo app.",
     image: wakainfo,
     stack: "html5, css3 and javascript",
     about: `wakainfo is a map app that renders information on countries.
@@ -49,20 +51,20 @@ export const projects = [
      as well as other information by selecting from a range of countries or clicking any country on the map. `,
   },
   {
-    title: "wakainfo",
-    image: wakainfo,
+    title: "complaint portal",
+    image: complaintportal,
     stack: "html5, css3 and javascript",
-    about: `wakainfo is a map app that renders information on countries.
-     users can access information as currency, population, continent, schools, hospital, hotels and tourist attractions 
-     as well as other information by selecting from a range of countries or clicking any country on the map. `,
+    about: `compliant portal is a 360 intra-business solution designed to facilatate complaint resolution. 
+    it enables staff log complaint for themselves, and unbehalf of customers
+    to appropriate department and persons with the responsibilities of resolving such complaints,
+    It has a chat box so users can communicate from both ends of complaint and resolution, still within the complaint portal.`,
   },
   {
-    title: "wakainfo",
-    image: wakainfo,
+    title: "pioclean laundry website",
+    image: pioclean,
     stack: "html5, css3 and javascript",
-    about: `wakainfo is a map app that renders information on countries.
-     users can access information as currency, population, continent, schools, hospital, hotels and tourist attractions 
-     as well as other information by selecting from a range of countries or clicking any country on the map. `,
+    about: `pioclean laundry website is a responsive and user friendly interface website, designed for seamless business transaction. users can easily navigate to the appropriate page
+     with less hussle. customers can request order,checkout and pickup request.`,
   },
 ];
 
