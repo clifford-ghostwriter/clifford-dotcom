@@ -10,7 +10,7 @@ const Error = () => {
         <p className="icon">
           <MdOutlineError />
         </p>
-        <p>Oops! you encountered an error.</p>
+        <p>oops! you encountered an error.</p>
         <Link to="/">go back home.</Link>
       </div>
     </Wrapper>

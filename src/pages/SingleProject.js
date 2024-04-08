@@ -58,6 +58,10 @@ const SingleProject = () => {
 const Wrapper = styled.div`
   padding-bottom: 2rem;
   /* height: 70dvh; */
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid red; */
   /* box-shadow: 2px 2px 3px black; */
   /* background-color: black; */
   /* height: 15rem; */
@@ -65,7 +69,8 @@ const Wrapper = styled.div`
   isolation: isolate;
 
   .project__card {
-    width: 60%;
+    /* width: 80%; */
+    /* border: 2px solid red; */
   }
 
   .singleproject__link {
@@ -128,6 +133,40 @@ const Wrapper = styled.div`
   .project__img:hover .project__link {
     display: grid;
     z-index: 999;
+  }
+
+  @media (min-width: 550px) {
+    .project__card {
+      width: 90%;
+    }
+
+    .project__img img {
+      object-fit: cover;
+      object-position: center 45%;
+    }
+  }
+
+  @media (min-width: 800px) {
+    .project__card {
+      width: 80%;
+    }
+
+    .project__img img {
+      object-fit: cover;
+      object-position: center 45%;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .project__card {
+      width: 70%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .project__card {
+      width: 60%;
+    }
   }
 `;
 export default SingleProject;

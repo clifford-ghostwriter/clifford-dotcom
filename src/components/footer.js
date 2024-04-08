@@ -78,8 +78,7 @@ const Wrapper = styled.div`
 
   address {
     display: grid;
-    /* grid-template-columns: auto auto auto; */
-    /* grid-template-rows: auto auto auto; */
+
     justify-items: center;
     /* border: 1px solid white; */
     width: max-content;
@@ -89,28 +88,32 @@ const Wrapper = styled.div`
   }
 
   .address__item {
-    /* border: 1px solid white; */
+    border: 1px solid white;
     border-radius: 5px;
     width: 15rem;
     text-align: center;
     align-items: center;
   }
 
-  .address__item:nth-child(1) {
-    border: 1px solid white;
-    /* grid-row: 1/2;
-    grid-column: 1/ 2; */
-  }
-  .address__item:nth-child(2) {
-    border: 1px solid white;
-    /* grid-row: 1/2;
-    grid-column: 2/ 3; */
-  }
-  .address__item:nth-child(3) {
-    border: 1px solid white;
-    /* grid-row: 2/3; */
-    /* grid-column: 1/ 3; */
-    /* align-self: center; */
+  @media (min-width: 800px) {
+    address {
+      grid-template-areas:
+        "area1 area1 area2 area2"
+        ".area3 area3 .";
+      /* width: 80%; */
+    }
+
+    address > *:nth-child(1) {
+      grid-area: area1;
+    }
+
+    address > *:nth-child(2) {
+      grid-area: area2;
+    }
+
+    address > *:nth-child(3) {
+      grid-area: area3;
+    }
   }
 `;
 export default Footer;
