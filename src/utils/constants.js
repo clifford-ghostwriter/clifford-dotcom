@@ -49,6 +49,7 @@ export const projects = [
     about: `wakainfo is a map app that renders information on countries.
      users can access information as currency, population, continent, schools, hospital, hotels and tourist attractions 
      as well as other information by selecting from a range of countries or clicking any country on the map. `,
+    url: "https://waka-info.netlify.app/",
   },
   {
     title: "complaint portal",
@@ -58,6 +59,7 @@ export const projects = [
     it enables staff log complaint for themselves, and unbehalf of customers
     to appropriate department and persons with the responsibilities of resolving such complaints,
     It has a chat box so users can communicate from both ends of complaint and resolution, still within the complaint portal.`,
+    url: "https://complaint-dash-portal.netlify.app/",
   },
   {
     title: "pioclean laundry website",
@@ -65,6 +67,7 @@ export const projects = [
     stack: "html5, css3 and javascript",
     about: `pioclean laundry website is a responsive and user friendly interface website, designed for seamless business transaction. users can easily navigate to the appropriate page
      with less hussle. customers can request order,checkout and pickup request.`,
+    url: "https://main--pioclean.netlify.app/",
   },
 ];
 

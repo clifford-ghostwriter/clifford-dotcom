@@ -81,6 +81,7 @@ const Wrapper = styled.div`
   align-content: center;
   color: white;
   z-index: 999;
+  border-bottom: 1px solid white;
 
   .theme_btn_container {
     display: flex;

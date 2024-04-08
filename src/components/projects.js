@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { PiTrafficSignLight } from "react-icons/pi";
 
 const Projects = ({ project, index }) => {
-  const { title, about, image, stack } = project;
+  const { title, about, image, stack, url } = project;
   console.log(about.slice(0, 100), index);
   return (
     <Wrapper>
@@ -14,10 +14,7 @@ const Projects = ({ project, index }) => {
         <div className="project__img">
           <img src={image} alt="project" />
           <div className="project__link">
-            <a
-              href="https://waka-info.netlify.app/"
-              target="_blank"
-              rel="noreferrer">
+            <a href={url} target="_blank" rel="noreferrer">
               <PiTrafficSignLight />
             </a>
           </div>
