@@ -55,15 +55,31 @@
 
 
 .light-theme {
-  --bcg-color: #ffffff;
-  --color: #000000;
-  --shadow-clr: #000000;
+  --clr--primary-one: #ffffff;
+  --clr--primary-two: #000000;
+  --clr--primary-three: #000000;
+  /* --clr--primary-four: #ff0000; */
+  --clr--primary-four: #0000ff;
+  --shadow-clr: black;
+  --sidebar-clr: rgba(0, 0, 0, 0.91);
+
+
+  /*  */
+  /* --clr--primary-one: #7790E9; */
+
+
+  --clr--primary-five: #c9abab;
+  --clr--primary-six: rgba(119, 144, 233, 0.8);
+  --clr--primary-eight: #c83fc8;
 }
 
 .dark-theme {
-  --bcg-color: #000000;
-  --color: #ffffff;
-  --shadow-clr: #ffffff;
+  --clr--primary-one: #000000;
+  --clr--primary-two: #ffffff;
+  --clr--primary-three: #ffffff;
+  --clr--primary-four: #ffd700;
+  --shadow-clr: white;
+  --sidebar-clr: rgba(0, 0, 0, 0.7);
 }
 
 
@@ -109,9 +125,9 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   /* width: 100vw; */
-  background-color: var(--bcg-color);
+  background-color: var(--clr--primary-one);
   opacity: 0.8;
-  color: var(--color);
+  color: var(--clr--primary-two);
 }
 
 /* A elements that don't have a class get default styles */

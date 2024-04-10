@@ -31,10 +31,30 @@ const Footer = () => {
         <div className="line__container">
           <p className="line"></p>
           <p className="socials">
-            <FaFacebook />
-            <FaTwitter />
-            <FaLinkedin />
-            <FaWhatsapp />
+            <a
+              href="https://www.facebook.com/CliffIzuchucks?mibextid=JRoKGi"
+              target="_blank"
+              rel="noreferrer">
+              <FaFacebook />
+            </a>
+            <a
+              href="https://twitter.com/clifford_izu"
+              target="_blank"
+              rel="noreferrer">
+              <FaTwitter />
+            </a>
+            <a
+              href="https:linkedin.com/in/clifford-izuchukwu-33027415b"
+              target="_blank"
+              rel="noreferrer">
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://wa.me/2348064985287"
+              target="_blank"
+              rel="noreferrer">
+              <FaWhatsapp />
+            </a>
           </p>
           <p className="line"></p>
         </div>
@@ -44,8 +64,8 @@ const Footer = () => {
 };
 
 const Wrapper = styled.div`
-  background-color: var(--clr--primary-two);
-  color: var(--clr--primary-four);
+  background-color: black;
+  color: white;
   padding-block: 1rem;
 
   .footer__center {
@@ -67,18 +87,32 @@ const Wrapper = styled.div`
   }
   .text {
     text-align: center;
+    font-size: 1.5rem;
+    font-style: italic !important;
   }
 
   .socials {
     display: flex;
+    padding-inline: 2rem;
+    font-size: 1.3rem;
+    color: white;
+    color: var(--clr--primary-four);
+    gap: 1rem;
   }
   .socials > * {
     flex: 1;
+    align-self: center;
+    /* border: 1px solid white; */
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    color: gold;
+    /* color: white; */
+    /* color: var(--clr--primary-four); */
   }
 
   address {
     display: grid;
-
     justify-items: center;
     /* border: 1px solid white; */
     width: max-content;
@@ -92,6 +126,8 @@ const Wrapper = styled.div`
     border-radius: 5px;
     width: 15rem;
     text-align: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
 
@@ -113,6 +149,10 @@ const Wrapper = styled.div`
 
     address > *:nth-child(3) {
       grid-area: area3;
+    }
+
+    .socials {
+      font-size: 1.8rem;
     }
   }
 `;

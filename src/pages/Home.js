@@ -15,7 +15,7 @@ const Home = () => {
           <p className="bio__text">
             I am a result oriented Front End Developer with the ability to learn
             and solve problems. I am open to opportunities and collaborations
-            gaered towards making the world a better place through Tech.
+            aimed at making the world a better place through Tech.
           </p>
           <div className="bio__center">
             <div className="image__container">
@@ -42,7 +42,10 @@ const Home = () => {
               </p>
               <p className="about__me__text">
                 <span className="info__title">stack: </span>
-                <span>Html5, Css3, Javascript, React and Nodejs</span>
+                <span>
+                  Html5, Css3, Javascript, React and{" "}
+                  <span className="node">Node.js</span>
+                </span>
               </p>
               <p className="about__me__text">
                 <span className="info__title">github:</span>
@@ -91,12 +94,15 @@ const Wrapper = styled.div`
   /* border: 1px solid yellow; */
   padding-bottom: 2rem;
 
+  .node {
+    text-transform: none;
+  }
   .bio__center {
     /* border: 2px solid blue; */
     /* height: 30rem; */
     display: grid;
     width: 100%;
-    color: white;
+    color: var(--clr--primary-three);
     padding-top: 2rem;
 
     /* grid-template-rows: auto; */
@@ -137,7 +143,6 @@ const Wrapper = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    display: block;
     width: 100%;
     height: 100%;
     display: block;
@@ -146,7 +151,7 @@ const Wrapper = styled.div`
     object-fit: cover;
     object-position: center 100%;
 
-    transition: var(--transition-two);
+    /* transition: var(--transition-two); */
   }
 
   .store {
@@ -165,14 +170,12 @@ const Wrapper = styled.div`
     padding-block: var(--size--50);
     /* border: 1px solid black; */
     justify-items: flex-start;
-  }
-
-  .about__me {
     text-transform: capitalize;
   }
 
   .info__title {
-    color: var(--clr--primary-three);
+    /* color: var(--clr--primary-three); */
+    color: red;
   }
 
   span {
@@ -199,6 +202,11 @@ const Wrapper = styled.div`
     display: grid;
     gap: 1rem;
     /* border: 1px solid blue; */
+  }
+
+  a {
+    color: var(--clr--primary-four);
+    text-decoration: underline !important;
   }
 
   .projects {
@@ -281,7 +289,15 @@ const Wrapper = styled.div`
   @media (min-width: 1000px) {
     .bio__center {
       grid-template-columns: 1fr 1fr;
-      gap: 2rem;
+      gap: 1rem;
+      /* border: 1px solid red; */
+    }
+
+    .about__me__text {
+      text-transform: initial;
+      grid-template-columns: auto auto;
+      gap: 0.3rem;
+      /* border: 1px solid red; */
     }
 
     .bio__image {
@@ -296,6 +312,10 @@ const Wrapper = styled.div`
 
     .projects {
       width: 75%;
+    }
+
+    .about__me {
+      padding-block: 0;
     }
   }
 
@@ -329,12 +349,12 @@ const Wrapper = styled.div`
     .bio__center {
       grid-template-columns: 1fr 1fr;
       /* height: 40rem; */
-      gap: 2rem;
+
       /* border: 1px solid red; */
     }
 
     .image__container {
-      height: 35rem;
+      height: 38rem;
     }
 
     .bio__image {
@@ -352,11 +372,11 @@ const Wrapper = styled.div`
     }
   }
 
-  @media (min-width: 1800px) {
+  @media (min-width: 1700px) {
     .bio__center {
       grid-template-columns: 1fr 1fr;
       /* height: 40rem; */
-      gap: 2rem;
+
       /* border: 1px solid red; */
     }
 

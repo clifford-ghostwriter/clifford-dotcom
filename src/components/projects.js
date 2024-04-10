@@ -58,6 +58,7 @@ const Wrapper = styled.div`
     display: grid;
     gap: 1rem;
     padding-block: 1rem;
+    padding-left: 0.2rem;
   }
 
   .project__info > * {
@@ -79,6 +80,7 @@ const Wrapper = styled.div`
     top: 0;
     left: 0;
     background-color: black;
+    /* background-color: var(--sidebar-clr); */
     font-size: 5rem;
     display: none;
     justify-items: center;
@@ -117,7 +119,8 @@ const Wrapper = styled.div`
     z-index: 999;
   }
   span {
-    color: var(--clr--primary-three);
+    /* color: var(--clr--primary-three); */
+    color: white;
   }
 `;
 export default Projects;

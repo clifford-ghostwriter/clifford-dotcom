@@ -35,7 +35,7 @@ const Sidebar = () => {
 };
 
 const Wrapper = styled.div`
-  background-color: blue;
+  /* background-color: --sidebar-clr; */
   position: relative;
   display: grid;
   justify-content: center;
@@ -45,10 +45,10 @@ const Wrapper = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--clr--primary-two);
+    background-color: var(--sidebar-clr);
     height: 100dvh;
     width: 100%;
-    opacity: 0.8;
+    /* opacity: 0.8; */
     transform: translate(-100%);
     transition: var(--transition);
     z-index: 999;
@@ -70,6 +70,7 @@ const Wrapper = styled.div`
     /* border: 1px solid red; */
     display: flex;
     align-items: center;
+    color: red;
   }
 
   li {
@@ -95,6 +96,8 @@ const Wrapper = styled.div`
     text-transform: capitalize;
     color: var(--clr--primary-four);
     letter-spacing: 0.1rem;
+    color: red;
+    font-weight: bolder;
   }
 
   .sidebar__links {

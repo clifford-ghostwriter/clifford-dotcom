@@ -206,7 +206,7 @@ const Wrapper = styled.div`
     font-size: var(--fs-700);
     background-color: transparent;
     /* border: 1px solid red; */
-    color: white;
+    color: var(--clr--primary-two);
   }
 
   @media (min-width: 800px) {

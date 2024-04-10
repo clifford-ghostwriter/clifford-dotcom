@@ -111,7 +111,7 @@ const Wrapper = styled.div`
     flex-shrink: 0;
     /* align-content: stretch; */
     border: none;
-    box-shadow: var(--box-shadow);
+    box-shadow: 2px 2px 3px white;
     /* border: 1px solid yellow; */
   }
 
@@ -181,7 +181,7 @@ const Wrapper = styled.div`
     list-style: none;
     text-decoration: none;
     text-transform: capitalize;
-    color: var(--clr--primary-four);
+    color: white;
     letter-spacing: 0.1rem;
   }
   /* 

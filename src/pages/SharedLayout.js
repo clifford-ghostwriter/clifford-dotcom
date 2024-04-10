@@ -17,7 +17,7 @@ const SharedLayout = () => {
   }, [scroll]);
 
   useEffect(() => {
-    if (scroll >= 40) {
+    if (scroll >= 150) {
       ref.current.classList.add("stickyNav");
     } else {
       ref.current.classList.remove("stickyNav");
