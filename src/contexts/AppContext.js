@@ -10,7 +10,7 @@ const initialAppAstate = {
   isdarkthemeon: false,
   theme: getFromLocalStorage("theme")
     ? getFromLocalStorage("theme")
-    : "light-theme",
+    : "dark-theme",
 };
 
 export const AppContext = ({ children }) => {

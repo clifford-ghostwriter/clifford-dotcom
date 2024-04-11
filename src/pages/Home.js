@@ -64,7 +64,9 @@ const Home = () => {
               <p className="about__me__text">
                 <span className="info__title">skills: </span>{" "}
                 <span>
-                  When I am not writing code, I make music, check out my
+                  <span className="node">
+                    When I am not writing code, I make music. check out my
+                  </span>
                   <Link to="/store" className="store">
                     online beat store
                   </Link>
@@ -76,7 +78,7 @@ const Home = () => {
       </div>
       <div className="section-center">
         <div className="projects__center">
-          <h2>projects</h2>
+          <h2 className="project__heading">portfolio projects</h2>
           <div className="projects">
             {projects.map((project, index) => {
               return <Projects project={project} key={index} index={index} />;
@@ -168,7 +170,7 @@ const Wrapper = styled.div`
     display: grid;
     gap: 1rem;
     padding-block: var(--size--50);
-    /* border: 1px solid black; */
+    /* border: 1px solid red; */
     justify-items: flex-start;
     text-transform: capitalize;
   }
@@ -224,6 +226,8 @@ const Wrapper = styled.div`
     width: 8rem;
     padding-left: 0.5rem;
     padding-bottom: -2rem;
+    width: max-content;
+    text-transform: capitalize;
   }
 
   .bio p {
@@ -261,7 +265,7 @@ const Wrapper = styled.div`
     }
 
     .bio {
-      /* width: 80%; */
+      width: 80%;
       margin: auto;
     }
   }
@@ -295,9 +299,10 @@ const Wrapper = styled.div`
 
     .about__me__text {
       text-transform: initial;
-      grid-template-columns: auto auto;
-      gap: 0.3rem;
+      /* grid-template-columns: auto auto; */
+      /* gap: 0.3rem; */
       /* border: 1px solid red; */
+      align-content: flex-start;
     }
 
     .bio__image {
@@ -306,7 +311,7 @@ const Wrapper = styled.div`
     }
 
     .bio {
-      width: 75%;
+      width: 90%;
       margin: auto;
     }
 
@@ -316,6 +321,7 @@ const Wrapper = styled.div`
 
     .about__me {
       padding-block: 0;
+      /* height: 30rem; */
     }
   }
 
@@ -376,17 +382,20 @@ const Wrapper = styled.div`
     .bio__center {
       grid-template-columns: 1fr 1fr;
       /* height: 40rem; */
+      width: 70%;
+      margin: auto;
 
       /* border: 1px solid red; */
     }
 
     .image__container {
-      height: 45rem;
+      height: 41rem;
     }
 
     .bio__image {
       object-fit: contain;
       object-position: center 100%;
+      height: 100%;
     }
 
     .bio {
@@ -396,6 +405,11 @@ const Wrapper = styled.div`
 
     .projects {
       width: 75%;
+    }
+
+    .about__me {
+      padding-block: 3rem;
+      /* height: 30rem; */
     }
   }
 `;

@@ -30,7 +30,7 @@ const Projects = ({ project, index }) => {
           </p>
           <p>
             <span>about: </span>
-            {about.substring(0, 150)} <br />
+            {about.substring(0, 143)}... <br />
             <Link to={`/products/${index}`} className="singleproject__link">
               see more...
             </Link>
@@ -75,6 +75,10 @@ const Wrapper = styled.div`
     /* border: 1px solid red; */
   }
 
+  .stack {
+    text-transform: capitalize;
+  }
+
   .project__link {
     position: absolute;
     top: 0;
@@ -109,7 +113,7 @@ const Wrapper = styled.div`
     border-radius: 222vw;
     /* width: 80%; */
     /* height: 80%; */
-    text-decoration: none;
+    text-decoration: none !important;
     text-transform: capitalize;
     /* overflow: hidden; */
   }
@@ -120,7 +124,9 @@ const Wrapper = styled.div`
   }
   span {
     /* color: var(--clr--primary-three); */
-    color: white;
+    /* color: white; */
+    color: red;
+    text-transform: capitalize;
   }
 `;
 export default Projects;
