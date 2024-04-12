@@ -116,7 +116,7 @@ const Wrapper = styled.div`
   }
 
   .site__link:hover {
-    color: gold;
+    color: rgba(255, 0, 0, 0.7);
   }
 
   span {
