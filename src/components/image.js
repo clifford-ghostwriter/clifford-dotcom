@@ -35,6 +35,8 @@ const Wrapper = styled.div`
   translate: -50%;
 
   transition: var(--transition-slow);
+  /* border: 1px solid blue; */
+  /* width: 100%; */
 
   img {
     /* border: 1px solid red; */

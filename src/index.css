@@ -116,10 +116,12 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  /* width: 100vw; */
+  width: 100vw;
   background-color: var(--clr--primary-one);
   opacity: 0.8;
   color: var(--clr--primary-two);
+
+
 }
 
 /* A elements that don't have a class get default styles */

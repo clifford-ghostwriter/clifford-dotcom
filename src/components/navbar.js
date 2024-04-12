@@ -58,7 +58,7 @@ const Navbar = forwardRef(function (_, ref) {
             </button>
           </div>
         </div>
-        <ul className="sidebar__links">
+        <ul className="nav__links">
           {navLinks.map((link) => {
             const { icon, text, id, url } = link;
             return (
@@ -167,7 +167,7 @@ const Wrapper = styled.div`
     padding: var(--size--25);
     font-size: 1.2rem;
   }
-  .sidebar__links {
+  .nav__links {
     gap: 2rem;
     /* border: 1px solid white; */
     padding-right: 1rem;
@@ -188,21 +188,13 @@ const Wrapper = styled.div`
     list-style: none;
     text-decoration: none;
     text-transform: capitalize;
-    color: white;
+    color: black;
     letter-spacing: 0.1rem;
   }
-  /* 
-  @keyframes bounce {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  } */
+
+  .url:hover {
+    color: white;
+  }
 
   .theme__btn:hover {
     /* animation: spinner 0.5s ease-in-out 1; */
@@ -216,13 +208,13 @@ const Wrapper = styled.div`
     .nav__btn {
       display: none;
     }
-    .sidebar__links {
+    .nav__links {
       display: flex;
     }
   }
 
   @media (width < 1000px) {
-    .sidebar__links {
+    .nav__links {
       margin-left: 3rem;
       /* border: 1px solid red; */
     }

@@ -59,6 +59,9 @@ const Wrapper = styled.div`
     z-index: 999;
   }
 
+  .url:hover {
+    color: white;
+  }
   .side-bar__close-btn {
     position: absolute;
     display: block;
@@ -67,7 +70,7 @@ const Wrapper = styled.div`
     background-color: transparent;
     color: var(--clr--primary-four);
     font-size: var(--fs-700);
-    /* border: 1px solid red; */
+
     display: flex;
     align-items: center;
     color: red;
@@ -75,9 +78,6 @@ const Wrapper = styled.div`
 
   li {
     display: flex;
-    /* flex: 1; */
-    /* border: 1px solid red; */
-    /* padding-left: 40%; */
     align-items: center;
     flex-shrink: 0;
     gap: 0.25rem;
@@ -86,10 +86,6 @@ const Wrapper = styled.div`
     list-style: none;
   }
 
-  /* li > * {
-    color: var(--clr--primary-four);
-    opacity: 1;
-  } */
   .url {
     list-style: none;
     text-decoration: none;
