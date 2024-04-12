@@ -9,15 +9,18 @@ const Image = ({ image, index, type }) => {
       // className={type}
       $image={image}
       $index={index}
-      className={type}></Wrapper>
+      className={type}>
+      <img src={image} alt="" />
+    </Wrapper>
   );
 };
 const Wrapper = styled.div`
   /* overflow: hidden; */
   transition: var(--transition-slow);
-  border: 1px solid red;
+  padding-block: 2rem;
+  /* border: 1px solid red; */
 
-  background-image: url(${(p) => p.$image});
+  /* background-image: url(${(p) => p.$image}); */
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,19 +37,34 @@ const Wrapper = styled.div`
 
   transition: var(--transition-slow);
 
-  /* img {
+  img {
+    /* border: 1px solid red; */
     width: 100%;
     height: 100%;
-    display: block;
     object-fit: cover;
-    object-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-  } */
+    object-position: center 50%;
+  }
 
   @media (min-width: 800px) {
-    background-size: contain;
+    /* width: 70%; */
+    margin: auto;
+    img {
+      /* border: 1px solid red; */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    img {
+      /* border: 1px solid red; */
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center center;
+    }
   }
 `;
 export default Image;

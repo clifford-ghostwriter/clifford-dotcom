@@ -43,14 +43,14 @@ export const navLinks = [
 
 export const projects = [
   {
-    title: "wakainfo app.",
-    image: wakainfo,
-    stack: "Html5, Css3 and Javascript",
-    about: `wakainfo is a map app that renders information on countries.
-     users can access information as currency, population, continent, schools, hospital, hotels and tourist attractions 
-     as well as other information by selecting from a range of countries or clicking any country on the map. `,
-    url: "https://waka-info.netlify.app/",
+    title: "pioclean laundry website",
+    image: pioclean,
+    stack: "Html5, Css3, Javascript and React",
+    about: `pioclean laundry website is a responsive and user friendly website, designed for seamless business transaction. users can easily navigate to the appropriate page
+     with less hussle. customers can request order,checkout and pickup request.`,
+    url: "https://main--pioclean.netlify.app/",
   },
+
   {
     title: "complaint portal",
     image: complaintportal,
@@ -62,12 +62,13 @@ export const projects = [
     url: "https://complaint-dash-portal.netlify.app/",
   },
   {
-    title: "pioclean laundry website",
-    image: pioclean,
-    stack: "Html5, Css3, Javascript and React",
-    about: `pioclean laundry website is a responsive and user friendly website, designed for seamless business transaction. users can easily navigate to the appropriate page
-     with less hussle. customers can request order,checkout and pickup request.`,
-    url: "https://main--pioclean.netlify.app/",
+    title: "wakainfo app.",
+    image: wakainfo,
+    stack: "Html5, Css3 and Javascript",
+    about: `wakainfo is a map app that renders information on countries.
+     users can access information as currency, population, continent, schools, hospital, hotels and tourist attractions 
+     as well as other information by selecting from a range of countries or clicking any country on the map. `,
+    url: "https://waka-info.netlify.app/",
   },
 ];
 

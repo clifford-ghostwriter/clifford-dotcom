@@ -43,22 +43,13 @@ const Wrapper = styled.div`
     padding-block: 2rem;
   }
 
+  .events {
+    display: grid;
+    gap: 2rem;
+  }
   @media (min-width: 800px) {
-    .bio__center {
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      /* border: 1px solid red; */
-      /* width: 70%; */
-      margin: auto;
-    }
-
-    .bio__image {
-      object-fit: contain;
-      object-position: right 29%;
-    }
-
     .event__center {
-      width: 50%;
+      /* width: 30%; */
       margin: auto;
     }
   }

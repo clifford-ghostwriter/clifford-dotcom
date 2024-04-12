@@ -115,23 +115,20 @@ const Event = ({ event }) => {
 };
 
 const Wrapper = styled.div`
-  border: 3px solid yellow;
-  padding-block: 2rem;
-
-  /* width: 50vw; */
-  /* margin: auto; */
+  /* border: 3px solid yellow; */
+  /* padding-block: 2rem; */
+  /* width: 80%; */
+  margin: auto;
 
   .event__images {
-    /* display: flex; */
-    height: 30rem;
-    /* border: 1px solid red; */
+    height: 35rem;
     overflow-x: hidden;
-    /* width: 100%; */
     position: relative;
+    width: 80%;
+    margin: auto;
   }
 
   .event-center {
-    /* border: 1px solid yellow; */
     position: relative;
   }
   .image {
@@ -153,7 +150,6 @@ const Wrapper = styled.div`
   }
 
   .small__btn-container {
-    /* border: 1px solid blue; */
     position: absolute;
     bottom: 1rem;
     left: 50%;
@@ -166,7 +162,6 @@ const Wrapper = styled.div`
     width: 1rem;
     aspect-ratio: 1;
     border-radius: 500vw;
-    /* background-color: transparent; */
     border: 1px solid white;
     box-shadow: 2px 2px 3px black;
     cursor: pointer;
@@ -177,10 +172,6 @@ const Wrapper = styled.div`
   }
 
   .btn__container {
-    /* display: inline-flex; */
-    /* justify-content: space-between; */
-    /* border: 1px solid red; */
-    /* padding-inline: var(--size--100); */
     position: absolute;
     top: 50%;
     /* left: 5%; */
@@ -191,11 +182,6 @@ const Wrapper = styled.div`
   .btn__center {
     display: flex;
     justify-content: space-between;
-    /* border: 1px solid red; */
-    /* padding-inline: var(--size--100); */
-    /* position: absolute; */
-    /* top: 50%; */
-    /* left: 5%; */
     width: 90%;
 
     margin: auto;
@@ -205,26 +191,31 @@ const Wrapper = styled.div`
   .next-btn {
     font-size: var(--fs-700);
     background-color: transparent;
-    /* border: 1px solid red; */
     color: var(--clr--primary-two);
   }
 
   @media (min-width: 800px) {
-    .bio__center {
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      /* border: 1px solid red; */
-      /* width: 70%; */
+    width: 50%;
+    margin: auto;
+
+    .event__images {
+      height: 40rem;
+    }
+    .event__center {
+      /* width: 50%; */
       margin: auto;
     }
+  }
 
-    .bio__image {
-      object-fit: contain;
-      object-position: right 29%;
+  @media (min-width: 1200px) {
+    width: 45%;
+    margin: auto;
+
+    .event__images {
+      height: 37rem;
     }
-
     .event__center {
-      width: 50%;
+      /* width: 50%; */
       margin: auto;
     }
   }
