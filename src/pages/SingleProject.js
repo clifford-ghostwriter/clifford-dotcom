@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { projects } from "../utils/constants";
 import styled from "styled-components";
 // import { Link } from "react-router-dom";
+import { IoMdArrowRoundForward } from "react-icons/io";
 
 import { PiTrafficSignLight } from "react-icons/pi";
 
@@ -31,23 +32,24 @@ const SingleProject = () => {
           </div>
         </div>
         <div className="project__info">
-          <h3>
+          <h3 className="info">
             <span>title:</span>
             {title}
           </h3>
-          <p>
+          <p className="info">
             <span>stack:</span>
             {stack}
           </p>
-          <p>
+          <p className="info">
             <span>about:</span>
             {about}
           </p>
           <a
+            className="site__link"
             href="https://waka-info.netlify.app/"
             target="_blank"
             rel="noreferrer">
-            visit site
+            visit site <IoMdArrowRoundForward />
           </a>
         </div>
       </div>
@@ -57,31 +59,20 @@ const SingleProject = () => {
 
 const Wrapper = styled.div`
   padding-bottom: 2rem;
-  /* height: 70dvh; */
+  /* height: 60vh; */
   display: grid;
   align-items: center;
   justify-content: center;
-  /* border: 2px solid red; */
-  /* box-shadow: 2px 2px 3px black; */
-  /* background-color: black; */
-  /* height: 15rem; */
-  color: white;
+  /* color: var(--clr--primary-three); */
   isolation: isolate;
 
-  .project__card {
-    /* width: 80%; */
-    /* border: 2px solid red; */
-  }
-
-  .singleproject__link {
-    color: red;
-    /* border: 1px solid red; */
-    display: inline;
+  .project__info {
+    display: grid;
+    gap: 1rem;
   }
 
   .project__info > * {
-    /* display: flex; */
-    gap: 1rem;
+    display: grid;
   }
 
   .project__img {
@@ -89,7 +80,6 @@ const Wrapper = styled.div`
     height: 15rem;
     position: relative;
     overflow: hidden;
-    /* border: 1px solid red; */
   }
 
   .project__link {
@@ -103,8 +93,11 @@ const Wrapper = styled.div`
     align-content: center;
     width: 100%;
     height: 100%;
-    /* border: 3px solid blue; */
     opacity: 0.8;
+  }
+
+  .project__link a {
+    color: var(--clr--primary-four);
   }
 
   .project__img img {
@@ -113,21 +106,22 @@ const Wrapper = styled.div`
     display: block;
     width: 100%;
     height: 100%;
-    /* border: 1px solid blue; */
   }
 
-  app {
-    color: white;
-    /* border: 1px solid white; */
-    display: grid;
-    justify-items: center;
-    align-content: center;
-    border-radius: 222vw;
-    /* width: 80%; */
-    /* height: 80%; */
-    text-decoration: none;
+  .site__link {
+    color: red;
+    display: inline-flex;
+    align-items: center;
+    width: max-content;
+  }
+
+  .site__link:hover {
+    color: gold;
+  }
+
+  span {
+    color: red;
     text-transform: capitalize;
-    /* overflow: hidden; */
   }
 
   .project__img:hover .project__link {
@@ -165,7 +159,7 @@ const Wrapper = styled.div`
 
   @media (min-width: 1200px) {
     .project__card {
-      width: 60%;
+      width: 50%;
     }
   }
 `;

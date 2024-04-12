@@ -4,7 +4,7 @@
 :root {
 
   /* colors */
-  --clr--primary-one: #7790E9;
+  /* --clr--primary-one: #7790E9; */
   --clr--primary-two: #000000;
   --clr--primary-three: #ff0000;
   --clr--primary-four: #ffffff;
@@ -160,7 +160,6 @@ select {
     scroll-behavior: auto !important;
   }
 }
-
 
 .btn {
   cursor: pointer;

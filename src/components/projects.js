@@ -50,7 +50,6 @@ const Wrapper = styled.div`
 
   .singleproject__link {
     color: red;
-    /* border: 1px solid red; */
     display: inline;
   }
 
@@ -62,8 +61,6 @@ const Wrapper = styled.div`
   }
 
   .project__info > * {
-    /* display: flex; */
-    /* gap: 0.5rem; */
     display: grid;
   }
 
@@ -72,7 +69,6 @@ const Wrapper = styled.div`
     height: 15rem;
     position: relative;
     overflow: hidden;
-    /* border: 1px solid red; */
   }
 
   .stack {
@@ -84,14 +80,12 @@ const Wrapper = styled.div`
     top: 0;
     left: 0;
     background-color: black;
-    /* background-color: var(--sidebar-clr); */
     font-size: 5rem;
     display: none;
     justify-items: center;
     align-content: center;
     width: 100%;
     height: 100%;
-    /* border: 3px solid blue; */
     opacity: 0.8;
   }
 
@@ -101,21 +95,16 @@ const Wrapper = styled.div`
     display: block;
     width: 100%;
     height: 100%;
-    /* border: 1px solid blue; */
   }
 
   a {
-    color: white;
-    /* border: 1px solid white; */
+    color: var(--clr--primary-four);
     display: grid;
     justify-items: center;
     align-content: center;
     border-radius: 222vw;
-    /* width: 80%; */
-    /* height: 80%; */
     text-decoration: none !important;
     text-transform: capitalize;
-    /* overflow: hidden; */
   }
 
   .project__img:hover .project__link {
@@ -123,8 +112,6 @@ const Wrapper = styled.div`
     z-index: 999;
   }
   span {
-    /* color: var(--clr--primary-three); */
-    /* color: white; */
     color: red;
     text-transform: capitalize;
   }
