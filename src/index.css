@@ -50,7 +50,7 @@
   --transition-two: all 0.3s ease;
   --transition-slow: all 0.5s linear;
   --box-shadow: 1px 1px 2px white;
-  --box-shadow-two: 2px 2px 3px black;
+  --box-shadow-two: 3px 3px 3px black;
 }
 
 
@@ -58,19 +58,11 @@
   --clr--primary-one: #ffffff;
   --clr--primary-two: #000000;
   --clr--primary-three: #000000;
-  /* --clr--primary-four: #ff0000; */
   --clr--primary-four: #0000ff;
   --shadow-clr: black;
   --sidebar-clr: rgba(0, 0, 0, 0.91);
 
 
-  /*  */
-  /* --clr--primary-one: #7790E9; */
-
-
-  --clr--primary-five: #c9abab;
-  --clr--primary-six: rgba(119, 144, 233, 0.8);
-  --clr--primary-eight: #c83fc8;
 }
 
 .dark-theme {
@@ -170,30 +162,23 @@ select {
 
 .btn {
   cursor: pointer;
-  /* align-self: center; */
   border: none;
   display: flex;
   align-content: center;
   justify-content: center;
-  /* border: 1px solid red; */
 }
 
 .section {
-  /* min-width: max-content; */
   padding-top: 3rem;
-  /* border: 2px solid orange; */
 }
 
 .section-center {
   max-width: 90vw;
-  /* min-width: min(1100px, 100%); */
   margin-inline: auto;
-  /* border: 1px solid blue; */
-
 }
 
 .underline {
-  /* border-bottom: 3px solid red; */
+
   width: 4rem;
 }
 
@@ -221,15 +206,3 @@ select {
     transform: rotate(360deg);
   }
 }
-
-/* 
-.loading {
-  width: 3rem;
-  height: 3rem;
-  margin: auto;
-  margin-top: 10rem;
-  border-radius: 50%;
-  border: 4px solid #ccc;
-  border-top-color: var(--clr--primary-one);
-  animation: spinner 0.6s linear infinite;
-} */

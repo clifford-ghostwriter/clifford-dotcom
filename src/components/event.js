@@ -117,14 +117,14 @@ const Event = ({ event }) => {
 const Wrapper = styled.div`
   /* border: 3px solid yellow; */
   /* padding-block: 2rem; */
-  /* width: 80%; */
+  width: 95%;
   margin: auto;
 
   .event__images {
     height: 35rem;
     overflow-x: hidden;
     position: relative;
-    width: 80%;
+    width: 75%;
     margin: auto;
   }
 
@@ -151,11 +151,13 @@ const Wrapper = styled.div`
 
   .small__btn-container {
     position: absolute;
-    bottom: 1rem;
+    bottom: 0.9rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 0.2rem;
+    /* padding-block: 1rem; */
+    /* border: 1px solid red; */
   }
   .small-btn {
     color: black;
@@ -165,10 +167,11 @@ const Wrapper = styled.div`
     border: 1px solid white;
     box-shadow: 2px 2px 3px black;
     cursor: pointer;
+    /* border: 1px solid red; */
   }
 
   .active-btn {
-    background-color: var(--clr--primary-six);
+    background-color: red;
   }
 
   .btn__container {

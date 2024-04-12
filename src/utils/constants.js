@@ -74,7 +74,7 @@ export const projects = [
 
 export const eventandgallery = [
   {
-    text: "excerpt from j.cole's concert, 2018",
+    text: "excerpt from J.Cole's concert, 2018",
     images: [coletix, colemepix, colegroup],
   },
   {

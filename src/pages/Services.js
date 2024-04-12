@@ -12,7 +12,7 @@ const Services = () => {
 };
 
 const Wrapper = styled.div`
-  height: 80dvh;
+  height: 70vh;
 
   .service__center {
     display: grid;

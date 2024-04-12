@@ -16,7 +16,7 @@ const Wrapper = styled.div`
     /* margin-top: 10rem; */
     border-radius: 50%;
     border: 5px solid var(--clr--primary-three);
-    border-top-color: var(--clr--primary-four);
+    border-top-color: red;
     animation: spinner 0.6s linear infinite;
   }
 `;

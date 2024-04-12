@@ -9,11 +9,10 @@ const EventsAndGallery = () => {
       <div className="section-center event__center">
         <div className="section__head">
           <h3 className="event__heading">events</h3>
-          <p>
-            over the years I have had opportunities to attend events, some were
-            for fun, while others were educational. I like to dump pictures from
-            some of the events here to entertain you, and if possible educate
-            you.
+          <p className="text">
+            I have had opportunities to attend events, some were for fun, while
+            others were educational. I like to dump pictures from some of the
+            events here to entertain you, and if possible educate you.
           </p>
         </div>
         <div className="events">
@@ -41,16 +40,24 @@ const Wrapper = styled.div`
   .section__head p {
     text-align: center;
     padding-block: 2rem;
+    margin: auto;
   }
 
   .events {
     display: grid;
     gap: 2rem;
+    /* border: 1px solid red; */
   }
   @media (min-width: 800px) {
     .event__center {
       /* width: 30%; */
       margin: auto;
+    }
+
+    .section__head p {
+      text-align: center;
+      padding-block: 2rem;
+      width: 70%;
     }
   }
 `;

@@ -41,14 +41,16 @@ const Navbar = forwardRef(function (_, ref) {
     <Wrapper ref={ref}>
       <div className="nav__center section-center">
         <div className="nav__text">
-          <p>clifford</p>
+          <Link to="/" className="icon">
+            clifford
+          </Link>
         </div>
         <div className="btn__container">
           <div className="theme_btn_container">
             <button className="theme__btn" onClick={(e) => rotateBtn(e)}>
-              {isdarkthemeon ? <MdOutlineLightMode /> : <BsMoonFill />}
+              {isdarkthemeon ? <BsMoonFill /> : <MdOutlineLightMode />}
             </button>
-            <p>{isdarkthemeon ? "bright theme " : "dark theme"}</p>
+            <p>{isdarkthemeon ? "dark theme " : "bright theme "}</p>
           </div>
           <div className="nav__btn__container">
             <button className="nav__btn" onClick={openSidebar}>
@@ -89,6 +91,11 @@ const Wrapper = styled.div`
     gap: 0.5rem;
     text-transform: capitalize;
     font-size: small;
+  }
+
+  .icon {
+    color: white;
+    text-decoration: none;
   }
 
   .btn__container {

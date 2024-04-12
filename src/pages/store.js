@@ -25,8 +25,8 @@ const Store = () => {
 
   return (
     <Wrapper className="section">
-      <div className="section-center">
-        <div>
+      <div className="section-center store-center">
+        <div className="studio__img">
           <img src={studiopix} alt="studiopicture" />
         </div>
         <p className="text">This page is under development</p>
@@ -39,13 +39,36 @@ const Wrapper = styled.div`
   display: grid;
   justify-items: center;
   align-items: center;
-  border: 1px solid red;
-  min-height: 50dvh;
+  min-height: 70vh;
+
+  .studio__img {
+    width: 90%;
+    margin: auto;
+  }
 
   .text {
     font-weight: bolder;
     font-size: large;
     padding-block: 1rem;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    box-shadow: var(--box-shadow-two);
+  }
+
+  .store-center {
+    display: grid;
+  }
+
+  @media (min-width: 1000px) {
+    .studio__img {
+      border: 1px solid black;
+      /* width: 80%; */
+      margin: auto;
+      height: 40rem;
+    }
   }
 `;
 export default Store;
