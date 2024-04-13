@@ -67,6 +67,7 @@ const Wrapper = styled.div`
   background-color: black;
   color: white;
   padding-block: 1rem;
+  border: 2px solid white;
 
   .footer__center {
     /* border: 1px solid red; */
