@@ -91,7 +91,7 @@ const Home = () => {
 };
 
 const Wrapper = styled.div`
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   padding-bottom: 2rem;
   /* overflow-x: hidden; */
 
@@ -100,7 +100,7 @@ const Wrapper = styled.div`
   }
 
   .bio {
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
   .bio__center {
     /* border: 2px solid blue; */
@@ -179,7 +179,7 @@ const Wrapper = styled.div`
     padding-top: 4rem;
     display: grid;
     gap: 1rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   a {
