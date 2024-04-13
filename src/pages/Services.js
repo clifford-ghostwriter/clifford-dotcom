@@ -21,6 +21,7 @@ const Wrapper = styled.div`
     /* border: 1px solid red; */
     height: 100%;
     font-style: italic;
+    /* color: red; */
   }
 `;
 export default Services;
