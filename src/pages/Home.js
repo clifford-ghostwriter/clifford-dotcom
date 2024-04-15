@@ -43,8 +43,8 @@ const Home = () => {
               <p className="about__me__text">
                 <span className="info__title">stack: </span>
                 <span>
-                  Html5, Css3, Javascript, React and{" "}
-                  <span className="node">Node.js</span>
+                  <span className="node">Node.js</span>, React, Javascript,
+                  Html5 and Css3
                 </span>
               </p>
               <p className="about__me__text">
