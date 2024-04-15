@@ -50,6 +50,7 @@ const Home = () => {
               <p className="about__me__text">
                 <span className="info__title">github:</span>
                 <a
+                  className="link"
                   href="https://github.com/clifford-ghostwriter"
                   target="_blank"
                   rel="noreferrer">
@@ -67,7 +68,7 @@ const Home = () => {
                   <span className="node">
                     When I am not writing code, I make music. check out my
                   </span>
-                  <Link to="/store" className="store">
+                  <Link to="/store" className="link store">
                     online beat store
                   </Link>
                 </span>
@@ -182,10 +183,10 @@ const Wrapper = styled.div`
     /* border: 1px solid red; */
   }
 
-  a {
+  .link {
     /* color: var(--clr--primary-four); */
     /* color: rgba(0, 0, 255, 0.5); */
-    /* color: white; */
+    color: blue;
     text-decoration: underline !important;
   }
 
