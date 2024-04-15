@@ -186,8 +186,9 @@ const Wrapper = styled.div`
   .link {
     /* color: var(--clr--primary-four); */
     /* color: rgba(0, 0, 255, 0.5); */
-    color: blue;
+    /* color: blue; */
     text-decoration: underline !important;
+    color: var(--clr--primary-three);
   }
 
   a:hover {
