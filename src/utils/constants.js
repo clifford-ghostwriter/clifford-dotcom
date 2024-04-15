@@ -45,7 +45,7 @@ export const projects = [
   {
     title: "pioclean laundry website",
     image: pioclean,
-    stack: "Html5, Css3, Javascript and React",
+    stack: "React, Javascript, Html5 and Css3",
     about: `pioclean laundry website is a responsive and user friendly website, designed for seamless business transaction. users can easily navigate to the appropriate page
      with less hussle. customers can request order,checkout and pickup request.`,
     url: "https://main--pioclean.netlify.app/",
@@ -54,7 +54,7 @@ export const projects = [
   {
     title: "complaint portal",
     image: complaintportal,
-    stack: "Html5, Css3, Javascript and React",
+    stack: "React, Javascript, Html5 and Css3",
     about: `compliant portal is a 360 intra-business solution designed to facilatate complaint resolution. 
     it enables staff log complaint for themselves, and unbehalf of customers
     to appropriate department and persons with the responsibilities of resolving such complaints,
@@ -64,7 +64,7 @@ export const projects = [
   {
     title: "wakainfo app.",
     image: wakainfo,
-    stack: "Html5, Css3 and Javascript",
+    stack: "Javascript, Html5 and Css3",
     about: `wakainfo is a map app that renders information on countries.
      users can access information as currency, population, continent, schools, hospital, hotels and tourist attractions 
      as well as other information by selecting from a range of countries or clicking any country on the map. `,
