@@ -183,8 +183,14 @@ const Wrapper = styled.div`
   }
 
   a {
-    color: var(--clr--primary-four);
+    /* color: var(--clr--primary-four); */
+    /* color: rgba(0, 0, 255, 0.5); */
+    /* color: white; */
     text-decoration: underline !important;
+  }
+
+  a:hover {
+    /* color: rgba(255, 255, 255, 0.5); */
   }
 
   .projects {

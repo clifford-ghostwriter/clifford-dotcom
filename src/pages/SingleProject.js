@@ -69,6 +69,8 @@ const Wrapper = styled.div`
   .project__info {
     display: grid;
     gap: 1rem;
+    padding-inline: 2rem;
+    padding-block: 1rem;
   }
 
   .project__info > * {
@@ -97,7 +99,8 @@ const Wrapper = styled.div`
   }
 
   .project__link a {
-    color: var(--clr--primary-four);
+    /* color: var(--clr--primary-four); */
+    color: white;
   }
 
   .project__img img {

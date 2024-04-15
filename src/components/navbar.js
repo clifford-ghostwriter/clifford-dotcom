@@ -108,7 +108,7 @@ const Wrapper = styled.div`
 
   .nav__center {
     height: 5rem;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.2);
     padding-block: 1rem;
     display: flex;
     /* display: grid; */
@@ -118,7 +118,7 @@ const Wrapper = styled.div`
     flex-shrink: 0;
     /* align-content: stretch; */
     border: none;
-    box-shadow: 2px 2px 3px white;
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
     /* border: 1px solid yellow; */
   }
 
@@ -140,10 +140,11 @@ const Wrapper = styled.div`
     font-size: var(--size--100);
     align-content: center;
     width: max-content;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     cursor: pointer;
     border: none;
     justify-self: flex-end;
+    /* color: white; */
 
     /* display: none; */
   }
@@ -160,6 +161,7 @@ const Wrapper = styled.div`
     background: transparent;
     /* margin-right: -10rem; */
     /* display: none; */
+    color: white;
   }
 
   .nav__text {
@@ -188,12 +190,12 @@ const Wrapper = styled.div`
     list-style: none;
     text-decoration: none;
     text-transform: capitalize;
-    color: black;
+    color: white;
     letter-spacing: 0.1rem;
   }
 
   .url:hover {
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
   }
 
   .theme__btn:hover {

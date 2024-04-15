@@ -57,7 +57,7 @@ const Wrapper = styled.div`
     display: grid;
     gap: 1rem;
     padding-block: 1rem;
-    padding-left: 0.2rem;
+    padding-inline: 2rem;
   }
 
   .project__info > * {
@@ -98,7 +98,8 @@ const Wrapper = styled.div`
   }
 
   a {
-    color: var(--clr--primary-four);
+    /* color: var(--clr--primary-four); */
+    color: white;
     display: grid;
     justify-items: center;
     align-content: center;
