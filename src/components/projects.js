@@ -42,7 +42,7 @@ const Projects = ({ project, index }) => {
 };
 
 const Wrapper = styled.div`
-  box-shadow: 2px 2px 3px black;
+  box-shadow: 2px 2px 2px var(--shadow-clr);
   background-color: black;
   /* height: 15rem; */
   color: white;
