@@ -112,7 +112,7 @@ const Wrapper = styled.div`
     overflow: hidden;
   }
   .heading {
-    border-left: 5px solid red;
+    border-left: 5px solid rgba(255, 0, 0, 0.5);
     margin: auto;
     width: max-content;
     padding-left: 0.5rem;
@@ -204,7 +204,7 @@ const Wrapper = styled.div`
   }
 
   .projects__center h2 {
-    border-left: 5px solid red;
+    border-left: 5px solid rgba(255, 0, 0, 0.5);
     margin: auto;
     width: 8rem;
     padding-left: 0.5rem;

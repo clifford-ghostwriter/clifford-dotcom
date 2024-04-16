@@ -89,7 +89,7 @@ const Wrapper = styled.div`
   }
   .text {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-style: italic !important;
   }
 
@@ -134,6 +134,9 @@ const Wrapper = styled.div`
   }
 
   @media (min-width: 800px) {
+    .text {
+      font-size: 1.5rem;
+    }
     address {
       grid-template-areas:
         "area1 area1 area2 area2"
