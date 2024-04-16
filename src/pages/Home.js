@@ -158,7 +158,8 @@ const Wrapper = styled.div`
   }
 
   .info__title {
-    color: red;
+    /* color: red; */
+    color: rgba(255, 0, 0, 0.7);
   }
 
   span {

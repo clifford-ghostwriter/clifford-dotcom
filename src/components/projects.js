@@ -53,6 +53,10 @@ const Wrapper = styled.div`
     display: inline;
   }
 
+  .singleproject__link:hover {
+    color: rgba(255, 0, 0, 0.7);
+  }
+
   .project__info {
     display: grid;
     gap: 1rem;
@@ -113,7 +117,8 @@ const Wrapper = styled.div`
     z-index: 999;
   }
   span {
-    color: red;
+    /* color: red; */
+    color: rgba(255, 0, 0, 0.7);
     text-transform: capitalize;
   }
 `;

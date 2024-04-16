@@ -84,7 +84,8 @@ const Wrapper = styled.div`
   .line {
     /* border: 1px solid red; */
     height: 0.25rem;
-    background-color: red;
+    /* background-color: red; */
+    background-color: rgba(255, 0, 0, 0.2);
   }
   .text {
     text-align: center;
