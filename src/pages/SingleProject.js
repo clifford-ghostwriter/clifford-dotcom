@@ -69,7 +69,7 @@ const Wrapper = styled.div`
   .project__info {
     display: grid;
     gap: 1rem;
-    padding-inline: 2rem;
+    padding-inline: 1.5rem;
     padding-block: 1rem;
   }
 
@@ -124,7 +124,7 @@ const Wrapper = styled.div`
 
   span {
     /* color: red; */
-    color: rgba(255, 0, 0, 0.7);
+    /* color: rgba(255, 0, 0, 0.7); */
     text-transform: capitalize;
   }
 

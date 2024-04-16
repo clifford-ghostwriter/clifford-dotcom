@@ -61,7 +61,7 @@ const Wrapper = styled.div`
     display: grid;
     gap: 1rem;
     padding-block: 1rem;
-    padding-inline: 2rem;
+    padding-inline: 1.5rem;
   }
 
   .project__info > * {
@@ -118,7 +118,7 @@ const Wrapper = styled.div`
   }
   span {
     /* color: red; */
-    color: rgba(255, 0, 0, 0.7);
+    /* color: rgba(255, 0, 0, 0.7); */
     text-transform: capitalize;
   }
 `;
