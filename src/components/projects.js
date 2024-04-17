@@ -49,12 +49,13 @@ const Wrapper = styled.div`
   isolation: isolate;
 
   .singleproject__link {
-    color: red;
+    color: rgba(255, 0, 0, 0.7);
     display: inline;
+    width: max-content;
   }
 
   .singleproject__link:hover {
-    color: rgba(255, 0, 0, 0.7);
+    color: rgba(255, 0, 0, 0.5);
   }
 
   .project__info {
@@ -118,7 +119,7 @@ const Wrapper = styled.div`
   }
   span {
     /* color: red; */
-    /* color: rgba(255, 0, 0, 0.7); */
+    color: rgba(255, 0, 0, 0.7);
     text-transform: capitalize;
   }
 `;

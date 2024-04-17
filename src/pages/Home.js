@@ -158,8 +158,7 @@ const Wrapper = styled.div`
   }
 
   .info__title {
-    /* color: red; */
-    /* color: rgba(255, 0, 0, 0.7); */
+    color: rgba(255, 0, 0, 0.7);
   }
 
   span {
@@ -185,15 +184,13 @@ const Wrapper = styled.div`
   }
 
   .link {
-    /* color: var(--clr--primary-four); */
-    /* color: rgba(0, 0, 255, 0.5); */
-    /* color: blue; */
+    color: rgba(255, 0, 0, 0.7);
     text-decoration: underline !important;
-    color: var(--clr--primary-three);
+    /* color: var(--clr--primary-three); */
   }
 
-  a:hover {
-    /* color: rgba(255, 255, 255, 0.5); */
+  .link:hover {
+    color: rgba(255, 0, 0, 0.5);
   }
 
   .projects {

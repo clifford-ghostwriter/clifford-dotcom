@@ -124,7 +124,7 @@ const Wrapper = styled.div`
 
   span {
     /* color: red; */
-    /* color: rgba(255, 0, 0, 0.7); */
+    color: rgba(255, 0, 0, 0.5);
     text-transform: capitalize;
   }
 
