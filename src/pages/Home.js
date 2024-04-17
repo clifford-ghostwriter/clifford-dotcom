@@ -184,7 +184,8 @@ const Wrapper = styled.div`
   }
 
   .link {
-    color: rgba(255, 0, 0, 0.7);
+    /* color: rgba(255, 0, 0, 0.7); */
+    color: var(--clr--primary-three);
     text-decoration: underline !important;
     /* color: var(--clr--primary-three); */
   }
