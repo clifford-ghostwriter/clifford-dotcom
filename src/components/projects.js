@@ -1,126 +1,27 @@
 import React from "react";
 import styled from "styled-components";
-// import { FaSearch } from "react-icons/fa";
-import { Link } from "react-router-dom";
-// import { MdOutlineLocationSearching } from "react-icons/md";
-import { PiTrafficSignLight } from "react-icons/pi";
+import { Project } from "./index";
+import { projects } from "../utils/constants";
 
-const Projects = ({ project, index }) => {
-  const { title, about, image, stack, url } = project;
-  console.log(about.slice(0, 100), index);
+const Projects = () => {
   return (
-    <Wrapper>
-      <div className="project__card">
-        <div className="project__img">
-          <img src={image} alt="project" />
-          <div className="project__link">
-            <a href={url} target="_blank" rel="noreferrer">
-              <PiTrafficSignLight />
-            </a>
-          </div>
-        </div>
-        <div className="project__info">
-          <h3>
-            <span>title: </span>
-            {title}
-          </h3>
-          <p>
-            <span>stack: </span>
-            {stack}
-          </p>
-          <p>
-            <span>about: </span>
-            {about.substring(0, 143)}... <br />
-            <Link to={`/products/${index}`} className="singleproject__link">
-              see more...
-            </Link>
-          </p>
-        </div>
+    <Wrapper className="contaibber mx-auto">
+      <div className="projects">
+        {projects.map((project, index) => {
+          return <Project project={project} key={index} index={index} />;
+        })}
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  box-shadow: 2px 2px 2px var(--shadow-clr);
-  background-color: black;
-  /* height: 15rem; */
-  color: white;
-  isolation: isolate;
-
-  .singleproject__link {
-    color: rgba(255, 0, 0, 0.7);
-    display: inline;
-    width: max-content;
-  }
-
-  .singleproject__link:hover {
-    color: rgba(255, 0, 0, 0.5);
-  }
-
-  .project__info {
-    display: grid;
+  .projects {
+    width: 300px;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
-    padding-block: 1rem;
-    padding-inline: 1.5rem;
-  }
-
-  .project__info > * {
-    display: grid;
-  }
-
-  .project__img {
-    width: auto;
-    height: 15rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .stack {
-    text-transform: capitalize;
-  }
-
-  .project__link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: black;
-    font-size: 5rem;
-    display: none;
-    justify-items: center;
-    align-content: center;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-  }
-
-  .project__img img {
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-  a {
-    /* color: var(--clr--primary-four); */
-    color: white;
-    display: grid;
-    justify-items: center;
-    align-content: center;
-    border-radius: 222vw;
-    text-decoration: none !important;
-    text-transform: capitalize;
-  }
-
-  .project__img:hover .project__link {
-    display: grid;
-    z-index: 999;
-  }
-  span {
-    /* color: red; */
-    color: rgba(255, 0, 0, 0.7);
-    text-transform: capitalize;
   }
 `;
 export default Projects;

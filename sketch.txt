@@ -1,0 +1,100 @@
+<div className="about__me">
+              <p className="about__me__text">
+                <span className="info__title">Name:</span>{" "}
+                <span>Clifford Izuchukwu</span>
+              </p>
+              <p className="about__me__text">
+                <span className="info__title">role:</span>{" "}
+                <span>Front End Developer</span>
+              </p>
+              <p className="about__me__text">
+                <span className="info__title">stack: </span>
+                <span>
+                  <span className="node">Node.js</span>, React, Javascript,
+                  Html5 and Css3
+                </span>
+              </p>
+              <p className="about__me__text">
+                <span className="info__title">github:</span>
+                <a
+                  className="link"
+                  href="https://github.com/clifford-ghostwriter"
+                  target="_blank"
+                  rel="noreferrer">
+                  clifford-ghostwriter
+                </a>
+              </p>
+              <p className="about__me__text">
+                <span className="info__title">location: </span>{" "}
+                <span>Remote</span>
+              </p>
+
+              <p className="about__me__text">
+                <span className="info__title">skills: </span>{" "}
+                <span>
+                  <span className="node">
+                    When I am not writing code, I make music. check out my
+                  </span>
+                  <Link to="/store" className="link store">
+                    online beat store
+                  </Link>
+                </span>
+              </p>
+            </div>
+
+
+
+
+            <div className="section-center">
+        <div className="bio">
+          <h3 className="heading">bio</h3>
+          <p className="bio__text">
+            I am a result oriented Front End Developer with the ability to learn
+            and solve problems. I am open to opportunities and collaborations
+            aimed at making the world a better place through Tech.
+          </p>
+          <div className="bio__center">
+            <div className="image__container">
+            
+              {/* <div className="overlay"></div> */}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="section-center">
+        <div className="projects__center">
+          <h2 className="project__heading">portfolio projects</h2>
+          <div className="projects">
+            {projects.map((project, index) => {
+              return <Projects project={project} key={index} index={index} />;
+            })}
+          </div>
+        </div>
+      </div>
+
+
+
+      npx create-react-app my-tailwind-app
+npm install tailwindcss postcss-cli autoprefixer
+npx tailwindcss init
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+//postcss.config.jsmodule.exports = {
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ],
+}
+/* src/styles.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';

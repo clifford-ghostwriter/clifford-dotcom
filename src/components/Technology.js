@@ -1,0 +1,81 @@
+import React from "react";
+import styled from "styled-components";
+import { techLogo } from "../utils/constants";
+
+const Technology = () => {
+  return (
+    <Wrapper>
+      {techLogo.map((logo, index) => {
+        // const animate = index % 2 === 0 ? "animation_one" : "animation_two";
+        const animate = [0, 3, 7, 6, 9, 10].includes(index)
+          ? "animation_one"
+          : "animation_two";
+
+        // console.log(animate);
+        return (
+          <div className="outer_box relative" key={index}>
+            <div className={` ${animate} image_container absolute `}>
+              <img src={logo} alt="logo" className="logo" />
+            </div>
+          </div>
+        );
+      })}
+    </Wrapper>
+  );
+};
+
+const Wrapper = styled.div`
+  /* border: 1px solid red; */
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr; */
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .logo {
+    width: 75px;
+    height: 75px;
+  }
+
+  .outer_box {
+    /* border: 1px solid red; */
+    padding: 1rem;
+    /* position: relative; */
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image_container {
+    border: 1px solid rgba(110, 58, 0, 0.6);
+    padding: 1rem;
+    border-radius: 10px;
+    /* position: absolute; */
+    /* top: 10%; */
+    /* left: 0; */
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-slow);
+
+    /* display: none; */
+  }
+
+  .animation_one {
+    animation: logoOne 3s linear infinite;
+  }
+
+  .animation_two {
+    animation: logoTwo 3s linear infinite;
+  }
+`;
+export default Technology;

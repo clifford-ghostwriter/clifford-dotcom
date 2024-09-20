@@ -1,5 +1,7 @@
 /* variables */
-
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 :root {
 
@@ -61,8 +63,8 @@
   --clr--primary-four: #0000ff;
   --shadow-clr: black;
   --sidebar-clr: rgba(0, 0, 0, 0.91);
-
-
+  --background-color: #ffffff;
+  --nav-bcg: #000;
 }
 
 .dark-theme {
@@ -72,6 +74,8 @@
   --clr--primary-four: #ffd700;
   --shadow-clr: white;
   --sidebar-clr: rgba(0, 0, 0, 0.7);
+  --background-color: linear-gradient(#000, #000108, #000439);
+  --nav-bcg: rgba(255, 0, 0, 0.2);
 }
 
 
@@ -117,11 +121,16 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   /* width: 100vw; */
-  background-color: var(--clr--primary-one);
+  background-color: var(--background-color);
   opacity: 0.8;
   color: var(--clr--primary-two);
+  background-image: var(--background-color);
 
 
+}
+
+body:has(.requires-no-scroll) {
+  overflow: hidden;
 }
 
 /* A elements that don't have a class get default styles */
@@ -205,5 +214,54 @@ select {
 @keyframes spinner {
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+
+@keyframes logoOne {
+
+  0% {
+    top: 0
+  }
+
+  25% {
+    top: 8%
+  }
+
+  50% {
+    top: 13%;
+  }
+
+  75% {
+    top: 8%;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+
+
+@keyframes logoTwo {
+  0% {
+    bottom: 0
+  }
+
+  25% {
+    bottom: 8%
+  }
+
+  50% {
+    bottom: 12%;
+  }
+
+  75% {
+    bottom: 8%;
+  }
+
+  100% {
+    bottom: 0;
   }
 }

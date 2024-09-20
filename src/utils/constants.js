@@ -13,6 +13,20 @@ import colegroup from "../assets/eventsandgallery/jcolefest/grouppix.jpg";
 import wakainfo from "../assets/projects/wakainfo.jpg";
 import pioclean from "../assets/projects/pioclean.jpg";
 import complaintportal from "../assets/projects/complaintportal.jpg";
+import helloDream from "../assets/projects/hellodrmm.jpg";
+
+// techlogo
+import dotnet from "../assets/technologyLogo/dotnet.png";
+import aspdotnet from "../assets/technologyLogo/asp.net.png";
+import csharp from "../assets/technologyLogo/c#.png";
+import react from "../assets/technologyLogo/react.png";
+import javacsript from "../assets/technologyLogo/javascript.png";
+import nodejs from "../assets/technologyLogo/node.png";
+import expressjs from "../assets/technologyLogo/express.png";
+import mondodb from "../assets/technologyLogo/mongodb.png";
+import sql from "../assets/technologyLogo/sql.png";
+import bootsrap from "../assets/technologyLogo/bootstrap.png";
+import tailwind from "../assets/technologyLogo/tailwind.png";
 
 export const navLinks = [
   {
@@ -42,6 +56,14 @@ export const navLinks = [
 ];
 
 export const projects = [
+  {
+    title: "hello dream",
+    image: helloDream,
+    stack: "React, Redux, Javascript, Html5, Css3 and Bootstrap",
+    about: `hello dream is still a devlepoment website for a start up company that renders tech services such ui/ux designs,
+     graphic designs, mentorship and training for tech enthusiast interested in various tech skill. `,
+    url: "https://hellodreams.netlify.app/",
+  },
   {
     title: "pioclean laundry website",
     image: pioclean,
@@ -81,4 +103,18 @@ export const eventandgallery = [
     text: "excerpt from devfest, 2023",
     images: [devfest, devfestme, devfestgroup],
   },
+];
+
+export const techLogo = [
+  dotnet,
+  aspdotnet,
+  csharp,
+  react,
+  javacsript,
+  nodejs,
+  expressjs,
+  mondodb,
+  sql,
+  bootsrap,
+  tailwind,
 ];

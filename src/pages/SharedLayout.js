@@ -17,11 +17,11 @@ const SharedLayout = () => {
   }, [scroll]);
 
   useEffect(() => {
-    if (scroll >= 150) {
-      ref.current.classList.add("stickyNav");
-    } else {
-      ref.current.classList.remove("stickyNav");
-    }
+    // if (scroll >= 150) {
+    //   ref.current.classList.add("stickyNav");
+    // } else {
+    //   ref.current.classList.remove("stickyNav");
+    // }
   });
   return (
     <Wrapper>
@@ -33,5 +33,7 @@ const SharedLayout = () => {
   );
 };
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  padding-top: 60px;
+`;
 export default SharedLayout;

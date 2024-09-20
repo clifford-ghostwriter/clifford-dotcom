@@ -39,7 +39,7 @@ const Navbar = forwardRef(function (_, ref) {
   // }, [theme]);
   return (
     <Wrapper ref={ref}>
-      <div className="nav__center section-center">
+      <div className="nav__center container mx-auto">
         <div className="nav__text">
           <Link to="/" className="icon">
             clifford
@@ -78,12 +78,20 @@ const Navbar = forwardRef(function (_, ref) {
 
 const Wrapper = styled.div`
   background-color: black;
-  height: 10rem;
+
   /* display: grid; */
   align-content: center;
   color: white;
   z-index: 999;
-  border-bottom: 1px solid white;
+  /* border-bottom: 1px solid white; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  /* background-color: rgba(255, 0, 0, 0.2); */
+  background-color: var(--nav-bcg);
 
   .theme_btn_container {
     display: flex;
@@ -96,30 +104,29 @@ const Wrapper = styled.div`
   .icon {
     color: white;
     text-decoration: none;
+    /* text-align: left; */
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 171.429% */
   }
 
   .btn__container {
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+
     align-content: center;
-    /* border: 1px solid white; */
-    gap: 1rem;
+    gap: 32px;
   }
 
   .nav__center {
-    height: 5rem;
-    background-color: rgba(255, 0, 0, 0.2);
-    padding-block: 1rem;
     display: flex;
-    /* display: grid; */
-    /* grid-template-columns: auto auto auto; */
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
-    /* align-content: stretch; */
     border: none;
-    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
-    /* border: 1px solid yellow; */
+    width: 80%;
+    height: 60px;
   }
 
   .nav__center > * {
@@ -127,51 +134,43 @@ const Wrapper = styled.div`
   }
 
   .nav__btn__container {
-    /* border: 1px solid yellow; */
     padding: var(--size--25);
     align-self: flex-end;
     display: grid;
-    /* justify-content: flex-end; */
   }
 
   .nav__btn {
     display: grid;
     justify-content: flex-end;
-    font-size: var(--size--100);
+    font-size: 14px;
     align-content: center;
     width: max-content;
-    /* border: 1px solid yellow; */
     cursor: pointer;
     border: none;
     justify-self: flex-end;
-    /* color: white; */
-
-    /* display: none; */
   }
 
   .theme__btn {
     display: grid;
     justify-content: flex-end;
-    font-size: var(--size--100);
     align-content: center;
     width: max-content;
-    /* border: 1px solid yellow; */
     cursor: pointer;
     border: none;
     background: transparent;
-    /* margin-right: -10rem; */
-    /* display: none; */
     color: white;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 171.429% */
   }
 
   .nav__text {
-    /* border: 1px solid yellow; */
     padding: var(--size--25);
     font-size: 1.2rem;
   }
   .nav__links {
     gap: 2rem;
-    /* border: 1px solid white; */
     padding-right: 1rem;
     display: none;
   }
