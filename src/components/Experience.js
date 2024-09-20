@@ -28,6 +28,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   text-align: left;
   /* display: none; */
+  /* display: none; */
 
   .heading {
     border-left: 5px solid rgba(255, 0, 0, 0.2);
