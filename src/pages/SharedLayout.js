@@ -34,6 +34,9 @@ const SharedLayout = () => {
 };
 
 const Wrapper = styled.section`
-  padding-top: 60px;
+  position: relative;
+  margin-top: 60px;
+  height: 100dvh;
+  overflow-x: hidden;
 `;
 export default SharedLayout;
