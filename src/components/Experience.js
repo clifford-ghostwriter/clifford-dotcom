@@ -51,7 +51,7 @@ const Wrapper = styled.div`
   }
 
   .text {
-    font-size: 14ps;
+    font-size: 14px;
   }
 `;
 export default Experience;

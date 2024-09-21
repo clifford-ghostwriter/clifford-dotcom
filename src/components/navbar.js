@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import React, { useEffect, useState, forwardRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
 import { UseAppContext } from "../contexts/AppContext";
@@ -9,7 +9,7 @@ import { MdOutlineLightMode } from "react-icons/md";
 // import { MdOutlineNightlightRound } from "react-icons/md";
 import { BsMoonFill } from "react-icons/bs";
 
-const Navbar = forwardRef(function (_, ref) {
+const Navbar = () => {
   // const [theme, setTheme] = useState("dark-theme");
   const { openSidebar, isSidebarOpen, toggletheme, isdarkthemeon } =
     UseAppContext();
@@ -38,7 +38,7 @@ const Navbar = forwardRef(function (_, ref) {
   //   document.documentElement.className = theme;
   // }, [theme]);
   return (
-    <Wrapper ref={ref}>
+    <Wrapper>
       <div className="nav__center container mx-auto">
         <div className="nav__text">
           <Link to="/" className="icon">
@@ -74,24 +74,21 @@ const Navbar = forwardRef(function (_, ref) {
       </div>
     </Wrapper>
   );
-});
+};
 
 const Wrapper = styled.div`
   background-color: black;
-
-  /* display: grid; */
   align-content: center;
   color: white;
   z-index: 999;
-  /* border-bottom: 1px solid white; */
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
-
   box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  /* box-shadow: -22.832px 4.151px 205.699px 0px rgba(12, 75, 246, 0.25); */
   /* background-color: rgba(255, 0, 0, 0.2); */
-  background-color: var(--nav-bcg);
+  /* background-color: var(--nav-bcg); */
+  /* border: 1px solid red; */
 
   .theme_btn_container {
     display: flex;

@@ -5,38 +5,42 @@ import { techLogo } from "../utils/constants";
 const Technology = () => {
   return (
     <Wrapper>
-      {techLogo.map((logo, index) => {
-        // const animate = index % 2 === 0 ? "animation_one" : "animation_two";
-        const animate = [0, 3, 7, 6, 9, 10].includes(index)
-          ? "animation_one"
-          : "animation_two";
+      <h3 className="heading">Technology</h3>
+      <div className="technologies">
+        {techLogo.map((logo, index) => {
+          // const animate = index % 2 === 0 ? "animation_one" : "animation_two";
+          const animate = [0, 3, 7, 6, 9, 10].includes(index)
+            ? "animation_one"
+            : "animation_two";
 
-        // console.log(animate);
-        return (
-          <div className="outer_box relative" key={index}>
-            <div className={` ${animate} image_container absolute `}>
-              <img src={logo} alt="logo" className="logo" />
+          // console.log(animate);
+          return (
+            <div className="outer_box relative" key={index}>
+              <div className={` ${animate} image_container absolute `}>
+                <img src={logo} alt="logo" className="logo" />
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  /* border: 1px solid red; */
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr; */
-  gap: 2rem;
-  align-items: center;
-  justify-content: space-between;
-  width: 300px;
-  display: flex;
-  /* flex-direction: column; */
-  flex-wrap: wrap;
-  justify-content: center;
-
+  .technologies {
+    /* border: 1px solid red; */
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr; */
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .logo {
     width: 75px;
     height: 75px;

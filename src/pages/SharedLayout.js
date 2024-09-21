@@ -1,31 +1,31 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import { Footer, Navbar, Sidebar } from "../components";
 
 const SharedLayout = () => {
-  const [scroll, setscroll] = useState();
-  const ref = useRef(null);
+  // const [scroll, setscroll] = useState();
+  // const ref = useRef(null);
   // console.log(ref);
 
-  useEffect(() => {
-    window.addEventListener("scroll", (e) => {
-      // console.log(window.scrollY);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", (e) => {
+  //     console.log(window.scrollY);
 
-      setscroll(window.scrollY);
-    });
-  }, [scroll]);
+  //     setscroll(window.scrollY);
+  //   });
+  // }, [scroll]);
 
-  useEffect(() => {
-    // if (scroll >= 150) {
-    //   ref.current.classList.add("stickyNav");
-    // } else {
-    //   ref.current.classList.remove("stickyNav");
-    // }
-  });
+  // useEffect(() => {
+  //   if (scroll >= 150) {
+  //     ref.current.classList.add("stickyNav");
+  //   } else {
+  //     ref.current.classList.remove("stickyNav");
+  //   }
+  // });
   return (
     <Wrapper>
-      <Navbar ref={ref} />
+      <Navbar />
       <Sidebar />
       <Outlet />
       <Footer />

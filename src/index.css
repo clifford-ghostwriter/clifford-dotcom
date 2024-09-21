@@ -125,6 +125,7 @@ body {
   opacity: 0.8;
   color: var(--clr--primary-two);
   background-image: var(--background-color);
+  min-height: 100dvh;
 
 
 }
