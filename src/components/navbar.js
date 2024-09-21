@@ -11,8 +11,11 @@ import { BsMoonFill } from "react-icons/bs";
 
 const Navbar = () => {
   // const [theme, setTheme] = useState("dark-theme");
-  const { openSidebar, isSidebarOpen, toggletheme, isdarkthemeon } =
-    UseAppContext();
+
+  const context = UseAppContext();
+  const { toggletheme, isdarkthemeon, openSidebar, isSidebarOpen } = context;
+
+  // console.log(context);
 
   // const changetheme = function () {
   //   if (theme === "dark-theme") {
@@ -201,6 +204,12 @@ const Wrapper = styled.div`
     text-transform: capitalize;
     color: white;
     letter-spacing: 0.1rem;
+    font-family: "DM Sans";
+    font-size: 14px;
+    /* font-size: var(--sm-font-size); */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
   }
 
   .url:hover {

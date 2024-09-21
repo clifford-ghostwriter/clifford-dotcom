@@ -1,4 +1,9 @@
-import { SIDEBAR_OPEN, SIDEBAR_CLOSE, TOGGLE_THEME } from "../utils/actions";
+import {
+  SIDEBAR_OPEN,
+  SIDEBAR_CLOSE,
+  TOGGLE_THEME,
+  SET_SCROLLHEIGHT,
+} from "../utils/actions";
 
 export const app_reducer = (state, action) => {
   if (action.type === SIDEBAR_OPEN) {
@@ -7,6 +12,12 @@ export const app_reducer = (state, action) => {
 
   if (action.type === SIDEBAR_CLOSE) {
     return { ...state, isSidebarOpen: false };
+  }
+
+  if (action.type === SET_SCROLLHEIGHT) {
+    console.log(action.payload);
+
+    return { ...state, scrollHeight: action.payload };
   }
 
   if (action.type === TOGGLE_THEME) {

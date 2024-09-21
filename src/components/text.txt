@@ -192,3 +192,16 @@ const Wrapper = styled.div`
   }
 `;
 export default Navbar;
+
+
+
+ useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+      setScrollHeight(scrollY);
+      console.log("hello", scrollY);
+    });
+    // return () => {
+    //   window.removeEventListener("scroll", handleScroll);
+    // };
+  });

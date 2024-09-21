@@ -32,15 +32,15 @@ const SingleProject = () => {
           </div>
         </div>
         <div className="project__info">
-          <h3 className="info">
+          <h3 className="title">
             <span>title:</span>
             {title}
           </h3>
-          <p className="info">
+          <p className="stack">
             <span>stack:</span>
             {stack}
           </p>
-          <p className="info">
+          <p className="about">
             <span>about:</span>
             {about}
           </p>
@@ -112,7 +112,6 @@ const Wrapper = styled.div`
   }
 
   .site__link {
-    color: red;
     display: inline-flex;
     align-items: center;
     width: max-content;
@@ -124,13 +123,20 @@ const Wrapper = styled.div`
 
   span {
     /* color: red; */
-    color: rgba(255, 0, 0, 0.5);
+    /* color: rgba(255, 0, 0, 0.5); */
     text-transform: capitalize;
   }
 
   .project__img:hover .project__link {
     display: grid;
     z-index: 999;
+  }
+
+  .stack,
+  .details,
+  .title {
+    text-transform: capitalize;
+    font-size: 14px;
   }
 
   @media (min-width: 550px) {

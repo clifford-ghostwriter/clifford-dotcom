@@ -68,6 +68,11 @@ const Wrapper = styled.div`
   color: white;
   padding-block: 1rem;
   /* border: 2px solid white; */
+  font-family: "DM Sans";
+  /* width: 300px; */
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 
   .footer__center {
     /* border: 1px solid red; */
@@ -89,14 +94,14 @@ const Wrapper = styled.div`
   }
   .text {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 14px;
     font-style: italic !important;
   }
 
   .socials {
     display: flex;
     padding-inline: 2rem;
-    font-size: 1.3rem;
+    font-size: 14px;
     color: white;
     color: var(--clr--primary-four);
     gap: 1rem;
@@ -131,6 +136,7 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 14px;
   }
 
   @media (min-width: 800px) {

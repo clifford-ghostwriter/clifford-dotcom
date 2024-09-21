@@ -119,6 +119,12 @@ const Wrapper = styled.div`
   /* padding-block: 2rem; */
   width: 100%;
   margin: auto;
+  font-family: "DM Sans";
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 12px;
 
   .event__images {
     height: 35rem;

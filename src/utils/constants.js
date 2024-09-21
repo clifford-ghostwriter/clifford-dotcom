@@ -49,7 +49,7 @@ export const navLinks = [
   },
   {
     id: 4,
-    text: "store",
+    text: "music store",
     url: "/store",
     icon: <MdLocalGroceryStore />,
   },

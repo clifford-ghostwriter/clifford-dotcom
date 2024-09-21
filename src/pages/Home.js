@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import cliffordOne from "../assets/cliffordone.jpg";
 // import cliffordTwo from "../assets/cliffordtwo.jpg";
 import clifford from "../assets/iclifford.jpg";
@@ -8,6 +8,8 @@ import { Technology, Experience, Projects } from "../components";
 // import { projects } from "../utils/constants";
 
 const Home = () => {
+  useEffect(() => {});
+
   return (
     <Wrapper className="container mx-auto gap-y-4">
       <div className="bio_section flex-col flex text-center gap-5 ">

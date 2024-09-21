@@ -7,7 +7,7 @@ import { PiTrafficSignLight } from "react-icons/pi";
 
 const Project = ({ project, index }) => {
   const { title, about, image, stack, url } = project;
-  console.log(about.slice(0, 100), index);
+  // console.log(about.slice(0, 100), index);
   return (
     <Wrapper>
       <div className="project__card">
@@ -20,15 +20,15 @@ const Project = ({ project, index }) => {
           </div>
         </div>
         <div className="project__info">
-          <h3>
+          <h3 className="title">
             <span>title: </span>
             {title}
           </h3>
-          <p>
+          <p className="stack">
             <span>stack: </span>
             {stack}
           </p>
-          <p>
+          <p className="details">
             <span>about: </span>
             {about.substring(0, 143)}... <br />
             <Link to={`/products/${index}`} className="singleproject__link">
@@ -42,27 +42,31 @@ const Project = ({ project, index }) => {
 };
 
 const Wrapper = styled.div`
-  color: white;
+  /* color: var(--clr--primary-one); */
   isolation: isolate;
   font-family: "DM Sans";
   /* width: 300px; */
   display: flex;
   flex-direction: column;
   text-align: left;
+  border: 1px solid rgba(110, 58, 0, 0.6);
+  border-radius: 15px;
+  overflow: hidden;
 
   .project__card {
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   .singleproject__link {
-    color: rgba(255, 0, 0, 0.7);
+    /* color: rgba(255, 0, 0, 0.7); */
     display: inline;
     width: max-content;
+    font-weight: 800;
   }
 
-  .singleproject__link:hover {
+  /* .singleproject__link:hover {
     color: rgba(255, 0, 0, 0.5);
-  }
+  } */
 
   .project__info {
     display: grid;
@@ -82,8 +86,11 @@ const Wrapper = styled.div`
     overflow: hidden;
   }
 
-  .stack {
+  .stack,
+  .details,
+  .title {
     text-transform: capitalize;
+    font-size: 14px;
   }
 
   .project__link {
@@ -124,8 +131,6 @@ const Wrapper = styled.div`
     z-index: 999;
   }
   span {
-    /* color: red; */
-    color: rgba(255, 0, 0, 0.7);
     text-transform: capitalize;
   }
 `;

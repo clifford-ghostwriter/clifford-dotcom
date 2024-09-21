@@ -40,6 +40,13 @@ const Wrapper = styled.div`
   justify-items: center;
   align-items: center;
   min-height: 70vh;
+  margin: auto;
+  font-family: "DM Sans";
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 12px;
 
   .studio__img {
     width: 90%;
@@ -47,8 +54,8 @@ const Wrapper = styled.div`
   }
 
   .text {
-    font-weight: bolder;
-    font-size: large;
+    /* font-weight: bolder; */
+    /* font-size: large; */
     padding-block: 1rem;
   }
 

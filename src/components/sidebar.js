@@ -6,7 +6,10 @@ import { navLinks } from "../utils/constants";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
-  const { isSidebarOpen, closeSidebar } = UseAppContext();
+  const context = UseAppContext();
+  // console.log(context);
+  // const { isSidebarOpen, closeSidebar } = UseAppContext();
+  const { closeSidebar, isSidebarOpen } = context;
   return (
     <Wrapper>
       <div
