@@ -104,7 +104,7 @@ const Wrapper = styled.div`
     color: white;
     font-family: "DM Sans";
     font-size: 14px;
-    font-size: var(--sm-font-size);
+    /* font-size: var(--sm-font-size); */
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 171.429% */

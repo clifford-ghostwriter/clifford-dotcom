@@ -89,6 +89,19 @@ const Wrapper = styled.div`
   /* background-color: rgba(255, 0, 0, 0.2); */
   /* background-color: var(--nav-bcg); */
   /* border: 1px solid red; */
+  display: grid;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* z-index: 100; */
+  /* background: #fff; */
+  display: flex;
+  height: 60px;
+  /* padding: 12px 18px 11px 18px; */
+  justify-content: center;
+  align-items: center;
+  box-shadow: -22.832px 4.151px 205.699px 0px rgba(12, 75, 246, 0.25);
 
   .theme_btn_container {
     display: flex;
