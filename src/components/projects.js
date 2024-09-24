@@ -17,11 +17,22 @@ const Projects = () => {
 
 const Wrapper = styled.div`
   .projects {
-    width: 300px;
-    /* border: 1px solid white; */
+    /* width: 300px; */
+    border: 1px solid white;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 3rem;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  @media (width >= 1100px) {
+    /* border: 1px solid red; */
+    .projects {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 900px;
+    }
   }
 `;
 export default Projects;

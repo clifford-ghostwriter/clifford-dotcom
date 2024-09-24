@@ -11,11 +11,11 @@ const Home = () => {
   useEffect(() => {});
 
   return (
-    <Wrapper className="container mx-auto gap-y-4">
-      <div className="bio_section flex-col flex text-center gap-5 ">
+    <Wrapper className="mx-auto container gap-y-4  ">
+      <div className="bio_section flex-col flex text-center gap-5 min-w-full justify-between md:min-w-[80%] lg:min-w-[70%] xlg:min-w-[60%] ">
         <div className="bio_header">
-          <h3 className="heading">bio</h3>
-          <div className="bio_text mx-auto">
+          <h3 className="heading mx-auto text-left">bio</h3>
+          <div className="bio_text mx-auto *:lg:text-[20px]">
             <p>
               I am a result oriented Software Developer with the ability to
               learn and solve problems. I am open to opportunities and
@@ -30,8 +30,12 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="bio_image_container">
-          <img className="mx-auto bio_image" src={clifford} alt="clifford" />
+        <div className="bio_image_container hover:translate-x-px hover:translate-y-px transition-all ">
+          <img
+            className="mx-auto bio_image lg:min-w-[400px] lg:min-h-[400px]"
+            src={clifford}
+            alt="clifford"
+          />
         </div>
       </div>
       <Technology />
@@ -42,7 +46,7 @@ const Home = () => {
 };
 
 const Wrapper = styled.div`
-  /* border: 1px solid white; */
+  border: 1px solid white;
 
   --sm-font-size: 14px;
 
@@ -53,6 +57,10 @@ const Wrapper = styled.div`
   gap: 5rem;
   padding-block: 1rem;
 
+  .bio_section {
+    /* border: 1px solid red; */
+    padding: 2rem;
+  }
   .heading {
     font-family: Poppins;
     font-size: 20px;
@@ -63,6 +71,7 @@ const Wrapper = styled.div`
     padding-block: 8px;
     padding-left: 5px;
     width: max-content;
+    width: 300px;
   }
 
   .bio_text {
@@ -84,7 +93,17 @@ const Wrapper = styled.div`
   .bio_image {
     width: 60%;
     width: 300px;
+    height: 300px;
     border-radius: 50%;
+  }
+
+  @media (width >= 900px) {
+    .bio_section {
+      flex-direction: row;
+      /* width: 700px; */
+      /* gap: 2rem; */
+      border: 1px solid red;
+    }
   }
 `;
 export default Home;

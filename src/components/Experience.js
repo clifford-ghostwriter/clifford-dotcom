@@ -9,35 +9,53 @@ const Experience = () => {
   return (
     <Wrapper>
       <h2 className="heading">Experience</h2>
-      <h3
-        className={
-          scrollHeight >= 800 ? "show_sub_heading sub_heading" : "sub_heading"
-        }>
-        Full Stack Developer- Freelance
-      </h3>
-      <p className={scrollHeight >= 820 ? " show_text text" : "text"}>
-        Over time, I have had opportunities of working on projects, both
-        personal and collaborative project where I engineered and maintained a
-        scalable e-commerce, start-up website with learning platform using
-        Dotnet-C# React.js, Javascript. I optimized database queries and
-        enhanced overall system performance using technologies like Efcore,
-        Node.js, Express.js and Mongoose, enabling robust API with seamless data
-        storage and retrieval from a MongoDb and SQL database, improving general
-        user experience with Css frameworks such as Bootsrap and Tailwind,
-        respectively.
-      </p>
+      <div className="experience">
+        <h3
+          className={
+            scrollHeight >= 1000
+              ? "show_sub_heading sub_heading"
+              : "sub_heading"
+          }>
+          Full Stack Developer- Freelance
+        </h3>
+        <p
+          className={
+            scrollHeight >= 820
+              ? " show_text text lg:text-[30px] "
+              : "text lg:text-[30px]"
+          }>
+          Over time, I have had opportunities of working on projects, both
+          personal and collaborative project where I engineered and maintained a
+          scalable e-commerce, start-up website with learning platform using
+          Dotnet-C# React.js, Javascript. I optimized database queries and
+          enhanced overall system performance using technologies like Efcore,
+          Node.js, Express.js and Mongoose, enabling robust API with seamless
+          data storage and retrieval from a MongoDb and SQL database, improving
+          general user experience with Css frameworks such as Bootsrap and
+          Tailwind, respectively.
+        </p>
+      </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
   font-family: "DM Sans";
-  width: 300px;
+
   display: flex;
   flex-direction: column;
   text-align: left;
   /* display: none; */
   /* display: none; */
+  border: 1px solid red;
+
+  .experience {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid white;
+    width: 300px;
+  }
 
   .heading {
     border-left: 5px solid rgba(255, 0, 0, 0.2);
@@ -53,21 +71,23 @@ const Wrapper = styled.div`
     /* border: 1px solid red; */
     padding: 0;
     /* border-left: 5px solid rgba(255, 0, 0, 0.2); */
-    padding-block: 8px;
+    /* padding-block: 8px; */
     padding-left: 5px;
     width: max-content;
     font-weight: 300;
-    transform: translate(100%);
-    transition: var(--transition-two);
-    visibility: hidden;
+    /* visibility: hidden; */
+    /* transform: translate(100%); */
+    /* transition: var(--transition-two); */
+
     /* display: none; */
   }
 
   .text {
     font-size: 14px;
-    transform: translateY(100%);
-    transition: var(--transition-two);
-    visibility: hidden;
+    /* visibility: hidden; */
+    /* transform: translateY(100%); */
+    /* transition: var(--transition-slow); */
+
     /* display: none; */
   }
 
@@ -81,6 +101,32 @@ const Wrapper = styled.div`
     transform: translate(0);
     visibility: visible;
     /* display: block; */
+  }
+
+  @media (width >= 900px) {
+    /* border: 1px solid red; */
+
+    .experience {
+      border: 1px solid red;
+      width: 700px;
+    }
+  }
+
+  @media (width >= 1100px) {
+    border: 1px solid red;
+    width: 900px;
+    padding: 16px;
+
+    .experience {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      /* width: 100%; */
+    }
+
+    .text {
+      width: 500px;
+    }
   }
 `;
 export default Experience;

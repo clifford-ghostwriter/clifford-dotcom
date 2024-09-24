@@ -13,7 +13,7 @@ import colegroup from "../assets/eventsandgallery/jcolefest/grouppix.jpg";
 import wakainfo from "../assets/projects/wakainfo.jpg";
 import pioclean from "../assets/projects/pioclean.jpg";
 import complaintportal from "../assets/projects/complaintportal.jpg";
-import helloDream from "../assets/projects/hellodrmm.jpg";
+import helloDream from "../assets/projects/hellodream.jpg";
 
 // techlogo
 import dotnet from "../assets/technologyLogo/dotnet.png";
@@ -27,6 +27,8 @@ import mondodb from "../assets/technologyLogo/mongodb.png";
 import sql from "../assets/technologyLogo/sql.png";
 import bootsrap from "../assets/technologyLogo/bootstrap.png";
 import tailwind from "../assets/technologyLogo/tailwind.png";
+import jquery from "../assets/technologyLogo/jquery.png";
+import efcore from "../assets/technologyLogo/efcore.png";
 
 export const navLinks = [
   {
@@ -109,8 +111,10 @@ export const techLogo = [
   dotnet,
   aspdotnet,
   csharp,
+  efcore,
   react,
   javacsript,
+  jquery,
   nodejs,
   expressjs,
   mondodb,

@@ -9,7 +9,7 @@ const Technology = () => {
       <div className="technologies">
         {techLogo.map((logo, index) => {
           // const animate = index % 2 === 0 ? "animation_one" : "animation_two";
-          const animate = [0, 3, 7, 6, 9, 10].includes(index)
+          const animate = [0, 3, 7, 6, 9, 11, 12].includes(index)
             ? "animation_one"
             : "animation_two";
 
@@ -80,6 +80,26 @@ const Wrapper = styled.div`
 
   .animation_two {
     animation: logoTwo 3s linear infinite;
+  }
+
+  @media (width >= 900px) {
+    /* border: 1px solid red; */
+
+    .technologies {
+      border: 1px solid red;
+      width: 700px;
+    }
+  }
+
+  @media (width >= 1100px) {
+    .technologies {
+      flex-direction: row;
+      /* width: 800px; */
+      /* gap: 2rem; */
+      /* border: 1px solid red; */
+      width: 900px;
+      /* padding: 16px; */
+    }
   }
 `;
 export default Technology;

@@ -38,5 +38,6 @@ const Wrapper = styled.section`
   margin-top: 60px;
   min-height: 100dvh;
   overflow-x: hidden;
+  /* border: 1px solid red; */
 `;
 export default SharedLayout;

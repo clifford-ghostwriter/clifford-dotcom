@@ -39,8 +39,6 @@ export const AppContext = ({ children }) => {
   }, [windowWidth]);
 
   useEffect(() => {
-    console.log("useeffect");
-
     window.addEventListener("resize", () => {
       const width = window.innerWidth;
       setWdith(width);

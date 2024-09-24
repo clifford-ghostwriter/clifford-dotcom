@@ -15,7 +15,7 @@ export const app_reducer = (state, action) => {
   }
 
   if (action.type === SET_SCROLLHEIGHT) {
-    console.log(action.payload);
+    // console.log(action.payload);
 
     return { ...state, scrollHeight: action.payload };
   }
