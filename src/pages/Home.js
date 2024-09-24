@@ -12,10 +12,10 @@ const Home = () => {
 
   return (
     <Wrapper className="mx-auto container gap-y-4  ">
-      <div className="bio_section flex-col flex text-center gap-5 min-w-full justify-between md:min-w-[80%] lg:min-w-[70%] xlg:min-w-[60%] ">
+      <div className="bio_section flex-col flex text-center gap-y-5 ">
         <div className="bio_header">
           <h3 className="heading mx-auto text-left">bio</h3>
-          <div className="bio_text mx-auto *:lg:text-[20px]">
+          <div className="bio_text mx-auto *:lg:text-[15px]">
             <p>
               I am a result oriented Software Developer with the ability to
               learn and solve problems. I am open to opportunities and
@@ -32,7 +32,7 @@ const Home = () => {
         </div>
         <div className="bio_image_container hover:translate-x-px hover:translate-y-px transition-all ">
           <img
-            className="mx-auto bio_image lg:min-w-[400px] lg:min-h-[400px]"
+            className="mx-auto bio_image lg:min-w-[350px] lg:min-h-[350px]"
             src={clifford}
             alt="clifford"
           />
@@ -46,7 +46,7 @@ const Home = () => {
 };
 
 const Wrapper = styled.div`
-  border: 1px solid white;
+  /* border: 1px solid white; */
 
   --sm-font-size: 14px;
 
@@ -59,7 +59,8 @@ const Wrapper = styled.div`
 
   .bio_section {
     /* border: 1px solid red; */
-    padding: 2rem;
+    padding-block: 2rem;
+    justify-content: space-between;
   }
   .heading {
     font-family: Poppins;
@@ -88,6 +89,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    /* border: 1px solid red; */
   }
 
   .bio_image {
@@ -95,14 +97,20 @@ const Wrapper = styled.div`
     width: 300px;
     height: 300px;
     border-radius: 50%;
+    /* border: 1px solid red; */
   }
 
   @media (width >= 900px) {
     .bio_section {
       flex-direction: row;
-      /* width: 700px; */
-      /* gap: 2rem; */
-      border: 1px solid red;
+      width: 700px;
+    }
+  }
+
+  @media (width >= 1100px) {
+    .bio_section {
+      flex-direction: row;
+      width: 900px;
     }
   }
 `;

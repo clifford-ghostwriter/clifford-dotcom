@@ -10,8 +10,8 @@ import { FaLocationDot } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <Wrapper className="section">
-      <div className=" footer__center">
+    <Wrapper className="section ">
+      <div className=" footer__center *:lg:text-[200px]">
         <div className="line__container">
           <p className="line"></p>
           <p className="text">contact me</p>
@@ -73,6 +73,10 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
+  min-height: 6rem;
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%;
 
   .footer__center {
     /* border: 1px solid red; */
@@ -131,6 +135,7 @@ const Wrapper = styled.div`
   .address__item {
     border: 1px solid white;
     border-radius: 5px;
+    /* min-height: max-content; */
     width: 15rem;
     text-align: center;
     display: flex;
@@ -141,7 +146,7 @@ const Wrapper = styled.div`
 
   @media (min-width: 800px) {
     .text {
-      font-size: 1.5rem;
+      font-size: 25px;
     }
     address {
       grid-template-areas:
@@ -149,7 +154,9 @@ const Wrapper = styled.div`
         ".area3 area3 .";
       /* width: 80%; */
     }
-
+    .address__item {
+      font-size: 20px;
+    }
     address > *:nth-child(1) {
       grid-area: area1;
     }
@@ -160,6 +167,7 @@ const Wrapper = styled.div`
 
     address > *:nth-child(3) {
       grid-area: area3;
+      /* width: 15rem; */
     }
 
     .socials {

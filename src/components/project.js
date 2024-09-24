@@ -69,6 +69,8 @@ const Wrapper = styled.div`
     display: inline;
     width: max-content;
     font-weight: 800;
+    /* border: 1px solid red; */
+    color: var(--clr--primary-two);
   }
 
   /* .singleproject__link:hover {
@@ -144,7 +146,7 @@ const Wrapper = styled.div`
     text-transform: capitalize;
   }
 
-  @media (width >= 800px) {
+  @media (width >= 900px) {
     width: 400px;
   }
 `;

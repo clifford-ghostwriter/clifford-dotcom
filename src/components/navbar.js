@@ -53,7 +53,9 @@ const Navbar = () => {
             <button className="theme__btn" onClick={(e) => rotateBtn(e)}>
               {isdarkthemeon ? <BsMoonFill /> : <MdOutlineLightMode />}
             </button>
-            <p>{isdarkthemeon ? "dark theme " : "bright theme "}</p>
+            <p className="theme__btn_text">
+              {isdarkthemeon ? "dark theme " : "bright theme "}
+            </p>
           </div>
           <div className="nav__btn__container">
             <button className="nav__btn" onClick={openSidebar}>
@@ -105,6 +107,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: -22.832px 4.151px 205.699px 0px rgba(12, 75, 246, 0.25);
+  font-family: "DM Sans";
 
   .theme_btn_container {
     display: flex;
@@ -123,6 +126,7 @@ const Wrapper = styled.div`
     font-style: normal;
     font-weight: 600;
     line-height: 24px; /* 171.429% */
+    letter-spacing: 5px;
   }
 
   .btn__container {
@@ -173,9 +177,10 @@ const Wrapper = styled.div`
     background: transparent;
     color: white;
     font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px; /* 171.429% */
+  }
+
+  .theme__btn_text {
+    letter-spacing: 2px;
   }
 
   .nav__text {
@@ -203,13 +208,10 @@ const Wrapper = styled.div`
     text-decoration: none;
     text-transform: capitalize;
     color: white;
-    letter-spacing: 0.1rem;
     font-family: "DM Sans";
     font-size: 14px;
-    /* font-size: var(--sm-font-size); */
     font-style: normal;
-    font-weight: 400;
-    line-height: 24px; /* 171.429% */
+    letter-spacing: 2px;
   }
 
   .url:hover {

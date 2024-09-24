@@ -59,10 +59,10 @@ export const navLinks = [
 
 export const projects = [
   {
-    title: "hello dream",
+    title: "hello dreams",
     image: helloDream,
-    stack: "React, Redux, Javascript, Html5, Css3 and Bootstrap",
-    about: `hello dream is still a devlepoment website for a start up company that renders tech services such ui/ux designs,
+    stack: "React, Redux, Javascript, Jquery, Html5, Css3 and Bootstrap",
+    about: `hello dream is still in devlepoment website for a start up company that renders tech services such ui/ux designs,
      graphic designs, mentorship and training for tech enthusiast interested in various tech skill. `,
     url: "https://hellodreams.netlify.app/",
   },

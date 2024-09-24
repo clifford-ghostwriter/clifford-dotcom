@@ -18,8 +18,8 @@ const SingleProject = () => {
 
   console.log(id);
   return (
-    <Wrapper className="section">
-      <div className="project__card section-center">
+    <Wrapper className="container mx-auto">
+      <div className="project__card">
         <div className="project__img">
           <img src={image} alt="project" />
           <div className="project__link">
@@ -58,18 +58,28 @@ const SingleProject = () => {
 };
 
 const Wrapper = styled.div`
-  padding-bottom: 2rem;
-  /* height: 60vh; */
+  /* padding-bottom: 2rem; */
+  min-height: calc(100vh - (10.5rem + 60px));
   display: grid;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
   /* color: var(--clr--primary-three); */
   isolation: isolate;
+  font-family: "DM Sans";
+  /* border: 1px solid red; */
 
+  .project__card {
+    border: 1px solid rgba(110, 58, 0, 0.6);
+    width: 300px;
+    border-radius: 10px;
+    /* background: #fff; */
+    box-shadow: 0px 2px 2px 0px rgba(210, 210, 245, 0.6);
+    padding: 16px;
+  }
   .project__info {
     display: grid;
     gap: 1rem;
-    padding-inline: 1.5rem;
+    /* padding-inline: 1.5rem; */
     padding-block: 1rem;
   }
 
@@ -79,7 +89,7 @@ const Wrapper = styled.div`
 
   .project__img {
     width: auto;
-    height: 15rem;
+    /* height: 15rem; */
     position: relative;
     overflow: hidden;
   }
@@ -103,6 +113,12 @@ const Wrapper = styled.div`
     color: white;
   }
 
+  .project__img {
+    overflow: hidden;
+    /* border: 1px solid red; */
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
   .project__img img {
     object-fit: cover;
     object-position: center;
@@ -115,10 +131,7 @@ const Wrapper = styled.div`
     display: inline-flex;
     align-items: center;
     width: max-content;
-  }
-
-  .site__link:hover {
-    color: rgba(255, 0, 0, 0.7);
+    font-weight: 800;
   }
 
   span {
@@ -134,42 +147,23 @@ const Wrapper = styled.div`
 
   .stack,
   .details,
-  .title {
+  .title,
+  .about {
     text-transform: capitalize;
     font-size: 14px;
   }
 
-  @media (min-width: 550px) {
+  @media (width >= 900px) {
     .project__card {
-      width: 90%;
+      width: 400px;
+      font-size: 20px;
     }
 
-    .project__img img {
-      object-fit: cover;
-      object-position: center 45%;
-    }
-  }
-
-  @media (min-width: 800px) {
-    .project__card {
-      width: 80%;
-    }
-
-    .project__img img {
-      object-fit: cover;
-      object-position: center 45%;
-    }
-  }
-
-  @media (min-width: 900px) {
-    .project__card {
-      width: 70%;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .project__card {
-      width: 50%;
+    .stack,
+    .details,
+    .title,
+    .about {
+      font-size: 18px;
     }
   }
 `;

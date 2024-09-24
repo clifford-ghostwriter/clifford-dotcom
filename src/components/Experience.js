@@ -8,12 +8,12 @@ const Experience = () => {
 
   return (
     <Wrapper>
-      <h2 className="heading">Experience</h2>
+      <h2 className="heading *:lg:text-[25px]">Experience</h2>
       <div className="experience">
         <h3
           className={
             scrollHeight >= 1000
-              ? "show_sub_heading sub_heading"
+              ? "show_sub_heading sub_heading *:lg:text-[20px]"
               : "sub_heading"
           }>
           Full Stack Developer- Freelance
@@ -21,8 +21,8 @@ const Experience = () => {
         <p
           className={
             scrollHeight >= 820
-              ? " show_text text lg:text-[30px] "
-              : "text lg:text-[30px]"
+              ? " show_text text lg:text-[20px] "
+              : "text lg:text-[20px]"
           }>
           Over time, I have had opportunities of working on projects, both
           personal and collaborative project where I engineered and maintained a
@@ -47,13 +47,13 @@ const Wrapper = styled.div`
   text-align: left;
   /* display: none; */
   /* display: none; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   .experience {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     width: 300px;
   }
 
@@ -105,23 +105,25 @@ const Wrapper = styled.div`
 
   @media (width >= 900px) {
     /* border: 1px solid red; */
+    width: 400px;
 
     .experience {
-      border: 1px solid red;
-      width: 700px;
+      /* border: 1px solid red; */
+      width: 400px;
     }
   }
 
   @media (width >= 1100px) {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 900px;
-    padding: 16px;
+
+    /* padding: 16px; */
 
     .experience {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      /* width: 100%; */
+      width: 100%;
     }
 
     .text {

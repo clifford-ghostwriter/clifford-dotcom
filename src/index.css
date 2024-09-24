@@ -127,6 +127,7 @@ body {
   background-image: var(--background-color);
   min-height: 100dvh;
   overflow: auto;
+  /* height: 100dvh; */
 
 
 }

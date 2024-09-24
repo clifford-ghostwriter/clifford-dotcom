@@ -18,7 +18,7 @@ const Projects = () => {
 const Wrapper = styled.div`
   .projects {
     /* width: 300px; */
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display: flex;
     flex-direction: column;
     gap: 3rem;

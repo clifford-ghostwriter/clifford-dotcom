@@ -86,7 +86,6 @@ const Wrapper = styled.div`
     /* border: 1px solid red; */
 
     .technologies {
-      border: 1px solid red;
       width: 700px;
     }
   }
@@ -94,11 +93,7 @@ const Wrapper = styled.div`
   @media (width >= 1100px) {
     .technologies {
       flex-direction: row;
-      /* width: 800px; */
-      /* gap: 2rem; */
-      /* border: 1px solid red; */
       width: 900px;
-      /* padding: 16px; */
     }
   }
 `;
