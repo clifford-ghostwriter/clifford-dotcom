@@ -95,6 +95,7 @@ const Wrapper = styled.div`
     height: 0.25rem;
     /* background-color: red; */
     background-color: rgba(255, 0, 0, 0.2);
+    background-color: rgba(110, 58, 0, 0.6);
   }
   .text {
     text-align: center;

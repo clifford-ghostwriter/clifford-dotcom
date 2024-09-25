@@ -65,6 +65,7 @@
   --sidebar-clr: rgba(0, 0, 0, 0.91);
   --background-color: #ffffff;
   --nav-bcg: #000;
+  --form--bcg: rgba(70, 58, 88, 0.6);
 }
 
 .dark-theme {
@@ -76,6 +77,7 @@
   --sidebar-clr: rgba(0, 0, 0, 0.7);
   --background-color: linear-gradient(#000, #000108, #000439);
   --nav-bcg: rgba(255, 0, 0, 0.2);
+  --form--bcg: rgba(60, 58, 78, 0.9);
 }
 
 

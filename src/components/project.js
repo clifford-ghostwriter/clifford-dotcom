@@ -149,5 +149,12 @@ const Wrapper = styled.div`
   @media (width >= 900px) {
     width: 400px;
   }
+  @media (width >= 110px) {
+    .stack,
+    .details,
+    .title {
+      font-size: 16px;
+    }
+  }
 `;
 export default Project;

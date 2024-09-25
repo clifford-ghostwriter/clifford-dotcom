@@ -112,6 +112,9 @@ const Wrapper = styled.div`
       flex-direction: row;
       width: 900px;
     }
+    .bio_text p {
+      font-size: 18px;
+    }
   }
 `;
 export default Home;

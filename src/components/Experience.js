@@ -21,7 +21,7 @@ const Experience = () => {
         <p
           className={
             scrollHeight >= 820
-              ? " show_text text lg:text-[20px] "
+              ? " show_text text lg:text-[30px] "
               : "text lg:text-[20px]"
           }>
           Over time, I have had opportunities of working on projects, both
@@ -128,6 +128,7 @@ const Wrapper = styled.div`
 
     .text {
       width: 500px;
+      font-size: 18px;
     }
   }
 `;

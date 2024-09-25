@@ -45,7 +45,7 @@ const Navbar = () => {
       <div className="nav__center container mx-auto">
         <div className="nav__text">
           <Link to="/" className="icon">
-            clifford
+            {" < clifford/>"}
           </Link>
         </div>
         <div className="btn__container">
@@ -126,7 +126,8 @@ const Wrapper = styled.div`
     font-style: normal;
     font-weight: 600;
     line-height: 24px; /* 171.429% */
-    letter-spacing: 5px;
+    letter-spacing: 2px;
+    color: #f15022;
   }
 
   .btn__container {
@@ -226,19 +227,22 @@ const Wrapper = styled.div`
     animation: spinner 0.5s ease-in-out 1;
   }
 
-  @media (width > 1100px) {
+  @media (width >= 1100px) {
     .nav__btn {
       display: none;
     }
     .nav__links {
       display: flex;
+      gap: 1rem;
     }
-  }
 
-  @media (width < 1000px) {
-    .nav__links {
-      margin-left: 3rem;
-      /* border: 1px solid red; */
+    .icon,
+    .theme__btn_text,
+    .url {
+      font-size: 20px;
+    }
+    .icon {
+      letter-spacing: 5px;
     }
   }
 `;
