@@ -42,7 +42,6 @@ const Project = ({ project, index }) => {
 };
 
 const Wrapper = styled.div`
-  /* color: var(--clr--primary-one); */
   isolation: isolate;
   font-family: "DM Sans";
   width: 300px;
@@ -53,11 +52,7 @@ const Wrapper = styled.div`
   border-radius: 15px;
   overflow: hidden;
   border-radius: 10px;
-  /* background: #fff; */
   box-shadow: 0px 2px 2px 0px rgba(210, 210, 245, 0.6);
-  /* box-shadow: 0px 5px 5px 0px rgba(110, 58, 0, 0.6); */
-
-  /* padding: 16px 17.52px 16px var(--Numbers-Spacing-Space-XXLarge, 32px); */
   padding: 16px;
 
   .project__card {

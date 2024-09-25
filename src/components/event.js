@@ -61,7 +61,6 @@ const Event = ({ event }) => {
         <p className="event__text">{text}</p>
         <div className="event__images">
           {images.map((image, slideIndex) => {
-            console.log(typeof image);
             let position;
             if (slideIndex === index) {
               position = "active";
@@ -115,31 +114,36 @@ const Event = ({ event }) => {
 };
 
 const Wrapper = styled.div`
-  /* border: 3px solid yellow; */
-  /* padding-block: 2rem; */
-  width: 100%;
   margin: auto;
   font-family: "DM Sans";
-  width: 350px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   text-align: left;
   font-size: 12px;
+  text-transform: capitalize;
+  border: 3px solid yellow;
 
   .event__images {
-    height: 35rem;
     overflow-x: hidden;
     position: relative;
-    /* width: 75%; */
+    width: 100%;
     margin: auto;
+    height: 400px;
+    box-shadow: 0px 5px 5px 0px rgba(210, 210, 245, 0.6);
+    /* border: 3px solid yellow; */
+    border: 1px solid rgba(110, 58, 0, 0.9);
+    /* padding: 1rem; */
   }
 
   .event-center {
     position: relative;
-  }
-  .image {
-    /* width: 100%; */
-    /* height: 100%; */
+    padding-block: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    border: 3px solid yellow;
   }
 
   .previous {
@@ -157,13 +161,11 @@ const Wrapper = styled.div`
 
   .small__btn-container {
     position: absolute;
-    bottom: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 0.2rem;
-    /* padding-block: 1rem; */
-    /* border: 1px solid red; */
+    bottom: 0;
   }
   .small-btn {
     color: black;
@@ -171,9 +173,7 @@ const Wrapper = styled.div`
     aspect-ratio: 1;
     border-radius: 500vw;
     border: 1px solid white;
-    box-shadow: 2px 2px 3px black;
     cursor: pointer;
-    /* border: 1px solid red; */
   }
 
   .active-btn {
@@ -183,9 +183,9 @@ const Wrapper = styled.div`
   .btn__container {
     position: absolute;
     top: 50%;
-    /* left: 5%; */
+    left: 0%;
     width: 100%;
-
+    /* border: 1px solid red; */
     margin: auto;
   }
   .btn__center {
@@ -204,7 +204,7 @@ const Wrapper = styled.div`
   }
 
   @media (min-width: 800px) {
-    width: 50%;
+    /* width: 50%; */
     margin: auto;
 
     .event__images {
@@ -217,7 +217,7 @@ const Wrapper = styled.div`
   }
 
   @media (min-width: 1200px) {
-    width: 45%;
+    width: 600px;
     margin: auto;
 
     .event__images {

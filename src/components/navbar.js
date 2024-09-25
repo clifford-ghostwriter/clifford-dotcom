@@ -66,6 +66,10 @@ const Navbar = () => {
         <ul className="nav__links">
           {navLinks.map((link) => {
             const { icon, text, id, url } = link;
+
+            if (text === "home") {
+              return null;
+            }
             return (
               <li className="link" key={id}>
                 {icon}
