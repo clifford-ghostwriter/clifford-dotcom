@@ -1,7 +1,7 @@
 import { MdAddAPhoto } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
 import { GiMightySpanner } from "react-icons/gi";
-import { MdLocalGroceryStore } from "react-icons/md";
+// import { MdLocalGroceryStore } from "react-icons/md";
 import devfest from "../assets/eventsandgallery/devfestevent/devfest.jpg";
 import devfestme from "../assets/eventsandgallery/devfestevent/devfestme.jpg";
 import devfestgroup from "../assets/eventsandgallery/devfestevent/devfestgroup.jpg";
@@ -49,12 +49,12 @@ export const navLinks = [
     url: "/eventsandgallery",
     icon: <MdAddAPhoto />,
   },
-  {
-    id: 4,
-    text: "music store",
-    url: "/store",
-    icon: <MdLocalGroceryStore />,
-  },
+  // {
+  //   id: 4,
+  //   text: "music store",
+  //   url: "/store",
+  //   icon: <MdLocalGroceryStore />,
+  // },
 ];
 
 export const projects = [

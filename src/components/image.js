@@ -19,9 +19,7 @@ const Wrapper = styled.div`
   height: 100%;
   width: 100%;
   position: absolute;
-
-  /* box-shadow: 0px 2px 15px 0px rgba(210, 210, 245, 0.6); */
-  /* border: 1px solid blue; */
+  margin: auto;
 
   img {
     /* border: 1px solid red; */
@@ -30,7 +28,7 @@ const Wrapper = styled.div`
   }
 
   @media (min-width: 800px) {
-    margin: auto;
+    /* background-color: #000439; */
 
     img {
       /* border: 1px solid red; */
@@ -46,7 +44,7 @@ const Wrapper = styled.div`
       /* border: 1px solid red; */
       width: 100%;
       height: 100%;
-      /* object-fit: contain; */
+      object-fit: contain;
       /* object-position: center center; */
     }
   }

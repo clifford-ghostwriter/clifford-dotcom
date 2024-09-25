@@ -39,7 +39,7 @@ const Event = ({ event }) => {
       let newvalue;
       newvalue = initialvalue + 1;
       if (newvalue > slidesData.length - 1) {
-        newvalue = 0;
+        newvalue = slidesData.length - 1;
       }
       return newvalue;
     });
@@ -50,7 +50,7 @@ const Event = ({ event }) => {
       let newvalue;
       newvalue = initialvalue - 1;
       if (newvalue < 0) {
-        newvalue = slidesData.length - 1;
+        newvalue = 0;
       }
       return newvalue;
     });
@@ -100,10 +100,18 @@ const Event = ({ event }) => {
 
         <div className="btn__container">
           <div className="btn__center">
-            <button className="btn prev-btn" onClick={decrement}>
+            <button
+              className={index === 0 ? "btn prev-btn hidden" : "btn prev-btn"}
+              onClick={decrement}>
               <FaChevronLeft />
             </button>
-            <button className="btn next-btn" onClick={increment}>
+            <button
+              className={
+                index === slidesData.length - 1
+                  ? "btn prev-btn hidden"
+                  : "btn prev-btn"
+              }
+              onClick={increment}>
               <FaChevronRight />
             </button>
           </div>
@@ -122,18 +130,26 @@ const Wrapper = styled.div`
   text-align: left;
   font-size: 12px;
   text-transform: capitalize;
-  border: 3px solid yellow;
+  /* border: 3px solid yellow; */
+
+  .event__text {
+    text-align: center;
+  }
 
   .event__images {
     overflow-x: hidden;
     position: relative;
+    overflow-y: hidden;
     width: 100%;
     margin: auto;
     height: 400px;
-    box-shadow: 0px 5px 5px 0px rgba(210, 210, 245, 0.6);
+    /* box-shadow: 0px 5px 5px 0px rgba(210, 210, 245, 0.6); */
     /* border: 3px solid yellow; */
-    border: 1px solid rgba(110, 58, 0, 0.9);
+    /* border: 1px solid rgba(110, 58, 0, 0.9); */
     /* padding: 1rem; */
+  }
+  .hidden {
+    visibility: hidden;
   }
 
   .event-center {
@@ -143,7 +159,7 @@ const Wrapper = styled.div`
     justify-content: center;
     flex-direction: column;
     gap: 12px;
-    border: 3px solid yellow;
+    /* border: 3px solid yellow; */
   }
 
   .previous {
@@ -204,25 +220,25 @@ const Wrapper = styled.div`
   }
 
   @media (min-width: 800px) {
-    /* width: 50%; */
+    width: 80%;
     margin: auto;
 
     .event__images {
-      height: 40rem;
+      height: 600px;
     }
     .event__center {
       /* width: 50%; */
       margin: auto;
     }
+    .event__text {
+      font-size: 18px;
+    }
   }
 
   @media (min-width: 1200px) {
-    width: 600px;
+    width: 90%;
     margin: auto;
 
-    .event__images {
-      height: 37rem;
-    }
     .event__center {
       /* width: 50%; */
       margin: auto;
