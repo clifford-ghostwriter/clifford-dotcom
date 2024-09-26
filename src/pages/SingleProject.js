@@ -16,7 +16,7 @@ const SingleProject = () => {
   const { title, about, image, stack, url } = project;
   // console.log(project, id);
 
-  console.log(id);
+  // console.log(id);
   return (
     <Wrapper className="container mx-auto">
       <div className="project__card">

@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { UseAppContext } from "../contexts/AppContext";
 import { FaTimes } from "react-icons/fa";
 import { navLinks } from "../utils/constants";
 import { Link } from "react-router-dom";
+import $ from "jquery";
 
 const Sidebar = () => {
   const context = UseAppContext();
   // console.log(context);
   // const { isSidebarOpen, closeSidebar } = UseAppContext();
   const { closeSidebar, isSidebarOpen } = context;
+
+  useEffect(() => {
+    if (isSidebarOpen) {
+      $("body").css({ overflow: "hidden" });
+    } else {
+      $("body").css({ overflow: "scroll" });
+    }
+  }, [isSidebarOpen]);
   return (
     <Wrapper>
       <div
