@@ -13,7 +13,7 @@ const SingleProject = () => {
   // const { projects } = UseAppContext();
 
   const project = projects[id];
-  const { title, about, image, stack } = project;
+  const { title, about, image, stack, url } = project;
   // console.log(project, id);
 
   console.log(id);
@@ -23,10 +23,7 @@ const SingleProject = () => {
         <div className="project__img">
           <img src={image} alt="project" />
           <div className="project__link">
-            <a
-              href="https://waka-info.netlify.app/"
-              target="_blank"
-              rel="noreferrer">
+            <a href={url} target="_blank" rel="noreferrer">
               <PiTrafficSignLight />
             </a>
           </div>
@@ -44,11 +41,7 @@ const SingleProject = () => {
             <span>about:</span>
             {about}
           </p>
-          <a
-            className="site__link"
-            href="https://waka-info.netlify.app/"
-            target="_blank"
-            rel="noreferrer">
+          <a className="site__link" href={url} target="_blank" rel="noreferrer">
             visit site <IoMdArrowRoundForward />
           </a>
         </div>
