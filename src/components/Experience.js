@@ -62,7 +62,7 @@ const Wrapper = styled.div`
     padding-block: 8px;
     padding-left: 5px;
     width: max-content;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
   }
 

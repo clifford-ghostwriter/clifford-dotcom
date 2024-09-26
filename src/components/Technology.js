@@ -46,6 +46,11 @@ const Wrapper = styled.div`
     height: 75px;
   }
 
+  .heading {
+    font-size: 25px;
+    font-weight: 400;
+  }
+
   .outer_box {
     /* border: 1px solid red; */
     padding: 1rem;
