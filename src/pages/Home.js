@@ -6,6 +6,7 @@ import styled from "styled-components";
 // import { Link } from "react-router-dom";
 import { Technology, Experience, Projects } from "../components";
 // import { projects } from "../utils/constants";
+import { FaGithub } from "react-icons/fa";
 
 const Home = () => {
   useEffect(() => {});
@@ -23,11 +24,18 @@ const Home = () => {
               Tech.
             </p>
             <p>
-              I am a Full Stack Developer with knowledge of
+              A Full Stack Developer with knowledge of
               object-oriented-programming(OOP), leveraging programming
               languages, frameworks and database managemanet tools like, Dotnet,
-              C#, React, Javascript, Node.js, Express.js, SQL, Mongodb
+              C#, Efcore, React, Javascript, Node.js, Express.js, SQL, Mongodb.
             </p>
+            <a
+              className="github"
+              href="https://github.com/clifford-ghostwriter"
+              target="_blank"
+              rel="noreferrer">
+              <FaGithub />
+            </a>
           </div>
         </div>
         <div className="bio_image_container hover:translate-x-px hover:translate-y-px transition-all ">
@@ -73,6 +81,12 @@ const Wrapper = styled.div`
     padding-left: 5px;
     width: max-content;
     width: 300px;
+  }
+  .github {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    font-family: "DM Sans";
   }
 
   .bio_text {

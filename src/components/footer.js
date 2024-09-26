@@ -7,6 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -54,6 +55,13 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer">
               <FaWhatsapp />
+            </a>
+            <a
+              className="github"
+              href="https://github.com/clifford-ghostwriter"
+              target="_blank"
+              rel="noreferrer">
+              <FaGithub />
             </a>
           </p>
           <p className="line"></p>

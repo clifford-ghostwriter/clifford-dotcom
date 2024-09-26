@@ -14,6 +14,7 @@ import wakainfo from "../assets/projects/wakainfo.jpg";
 import pioclean from "../assets/projects/pioclean.jpg";
 import complaintportal from "../assets/projects/complaintportal.jpg";
 import helloDream from "../assets/projects/hellodream.jpg";
+import dataVisualization from "../assets/projects/dataVisualization.jpg";
 
 // techlogo
 import dotnet from "../assets/technologyLogo/dotnet.png";
@@ -63,8 +64,16 @@ export const projects = [
     image: helloDream,
     stack: "React, Redux, Javascript, Jquery, Html5, Css3 and Bootstrap",
     about: `hello dream is still in devlepoment website for a start up company that renders tech services such ui/ux designs,
-     graphic designs, mentorship and training for tech enthusiast interested in various tech skill. `,
-    url: "https://hellodreams.netlify.app/",
+     graphic designs, mentorship and training for tech enthusiast interested in various tech skill.`,
+    url: "https://hellodreams.netlify.app",
+  },
+  {
+    title: "data visualization",
+    image: dataVisualization,
+    stack: "React, Javascript, Rechart, Leaflet Map, Html5, Css3 and Bootstrap",
+    about: ` this project is a visual representation of data, an unemployment against inflation rate data. this project is designed to show the relationship between unemployment
+    and inflation over a period of time. the visual representation of the data was achieved using barchart, linechart and other technologies.`,
+    url: "https://moyo-data-visualization.netlify.app",
   },
   {
     title: "pioclean laundry website",
@@ -72,7 +81,7 @@ export const projects = [
     stack: "React, Javascript, Html5 and Css3",
     about: `pioclean laundry website is a responsive and user friendly website, designed for seamless business transaction. users can easily navigate to the appropriate page
      with less hussle. customers can request order,checkout and pickup request.`,
-    url: "https://main--pioclean.netlify.app/",
+    url: "https://main--pioclean.netlify.app",
   },
 
   {
@@ -83,7 +92,7 @@ export const projects = [
     it enables staff log complaint for themselves, and unbehalf of customers
     to appropriate department and persons with the responsibilities of resolving such complaints,
     It has a chat box so users can communicate from both ends of complaint and resolution, still within the complaint portal.`,
-    url: "https://complaint-dash-portal.netlify.app/",
+    url: "https://complaint-dash-portal.netlify.app",
   },
   {
     title: "wakainfo app.",
@@ -92,7 +101,7 @@ export const projects = [
     about: `wakainfo is a map app that renders information on countries.
      users can access information as currency, population, continent, schools, hospital, hotels and tourist attractions 
      as well as other information by selecting from a range of countries or clicking any country on the map. `,
-    url: "https://waka-info.netlify.app/",
+    url: "https://waka-info.netlify.app",
   },
 ];
 

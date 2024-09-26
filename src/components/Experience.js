@@ -27,10 +27,10 @@ const Experience = () => {
           Over time, I have had opportunities of working on projects, both
           personal and collaborative project where I engineered and maintained a
           scalable e-commerce, start-up website with learning platform using
-          Dotnet-C# React.js, Javascript. I optimized database queries and
+          Dotnet, C# React.js, Javascript. I optimized database queries and
           enhanced overall system performance using technologies like Efcore,
           Node.js, Express.js and Mongoose, enabling robust API with seamless
-          data storage and retrieval from a MongoDb and SQL database, improving
+          data storage and retrieval from MongoDb and SQL database, improving
           general user experience with Css frameworks such as Bootsrap and
           Tailwind, respectively.
         </p>
