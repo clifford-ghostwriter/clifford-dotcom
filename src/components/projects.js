@@ -46,11 +46,6 @@ const Wrapper = styled.div`
       flex-wrap: wrap;
       width: 900px;
     }
-
-    .heading {
-     
-      /* font-size: 30px; */
-    
   }
 `;
 export default Projects;
