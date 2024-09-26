@@ -26,8 +26,9 @@ const Home = () => {
             <p>
               A Full Stack Developer with knowledge of
               object-oriented-programming(OOP), leveraging programming
-              languages, frameworks and database managemanet tools like, Dotnet,
-              C#, Efcore, React, Javascript, Node.js, Express.js, SQL, Mongodb.
+              languages, frameworks and database managemanet tools like Dotnet,
+              C#, Efcore, React, Javascript, Node.js, Express.js, SQL and
+              Mongodb.
             </p>
             <a
               className="github"
