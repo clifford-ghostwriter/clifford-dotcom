@@ -25,8 +25,8 @@ const Experience = () => {
               : "text lg:text-[20px]"
           }>
           Over time, I have had opportunities of working on projects, both
-          personal and collaborative project where I engineered and maintained a
-          scalable e-commerce, start-up website with learning platform using
+          personal and collaborative projects where I engineered and maintained
+          a scalable e-commerce, start-up website with learning platform using
           Dotnet, C#, React.js, Javascript. I optimized database queries and
           enhanced overall system performance using technologies like Efcore,
           Node.js, Express.js and Mongoose, enabling robust API with seamless

@@ -71,7 +71,7 @@ export const projects = [
     title: "data visualization",
     image: dataVisualization,
     stack: "React, Javascript, Rechart, Leaflet Map, Html5, Css3 and Bootstrap",
-    about: ` this project is a visual representation of data, an unemployment against inflation rate data. this project is designed to show the relationship between unemployment
+    about: ` this project is a visual representation of data, an unemployment against inflation rate data. It is designed to show the relationship between unemployment
     and inflation over a period of time. the visual representation of the data was achieved using barchart, linechart and other technologies.`,
     url: "https://moyo-data-visualization.netlify.app",
   },
